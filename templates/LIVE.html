@@ -1,0 +1,1732 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/OeEdA.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/img20130723ske48teams3.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/GESS.jpg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/46f6c8b3.jpeg);
+            background-size: 33% auto, 34% auto, 32% auto, 37% auto;
+            background-position: left top, right top, 0% 100%, 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        #A1st_single:hover {
+            position: relative;
+        }
+        
+        #A1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A2st_single:hover {
+            position: relative;
+        }
+        
+        #A2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A3st_single:hover {
+            position: relative;
+        }
+        
+        #A3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A3.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A4st_single:hover {
+            position: relative;
+        }
+        
+        #A4st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A5st_single:hover {
+            position: relative;
+        }
+        
+        #A5st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A5.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A6st_single:hover {
+            position: relative;
+        }
+        
+        #A6st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A6.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #A7st_single:hover {
+            position: relative;
+        }
+        
+        #A7st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/A/A7.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K1st_single:hover {
+            position: relative;
+        }
+        
+        #K1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K2st_single:hover {
+            position: relative;
+        }
+        
+        #K2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K3st_single:hover {
+            position: relative;
+        }
+        
+        #K3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K3.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K4st_single:hover {
+            position: relative;
+        }
+        
+        #K4st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K5st_single:hover {
+            position: relative;
+        }
+        
+        #K5st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K5.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #K6st_single:hover {
+            position: relative;
+        }
+        
+        #K6st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/K/K6.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #B1st_single:hover {
+            position: relative;
+        }
+        
+        #B1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/B/B1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #B2st_single:hover {
+            position: relative;
+        }
+        
+        #B2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/B/B2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #B3st_single:hover {
+            position: relative;
+        }
+        
+        #B3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/B/B3.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #B4st_single:hover {
+            position: relative;
+        }
+        
+        #B4st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/B/B4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #B5st_single:hover {
+            position: relative;
+        }
+        
+        #B5st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/B/B5.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #T4_1st_single:hover {
+            position: relative;
+        }
+        
+        #T4_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/T4/T4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #H1_1st_single:hover {
+            position: relative;
+        }
+        
+        #H1_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/H/cover1st.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #H1_2st_single:hover {
+            position: relative;
+        }
+        
+        #H1_2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%85%AC%E6%BC%94/H/cover2nd%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TN_1st_single:hover {
+            position: relative;
+        }
+        
+        #TN_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/Team%20N%201st%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TN_2st_single:hover {
+            position: relative;
+        }
+        
+        #TN_2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/Team%20N%202nd.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TN_3st_single:hover {
+            position: relative;
+        }
+        
+        #TN_3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/Team%20N%203rd%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TM_1st_single:hover {
+            position: relative;
+        }
+        
+        #TM_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/Team%20M%201st%20Stage%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TBII_1st_single:hover {
+            position: relative;
+        }
+        
+        #TBII_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/BII%201.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #TBII_2st_single:hover {
+            position: relative;
+        }
+        
+        #TBII_2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/%E5%85%AC%E6%BC%94/2nd-Stage.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_S_1st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_S_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/nHvPQ.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_S_2st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_S_2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/S%202nd%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_S_3st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_S_3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/S-%203rd.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_KII_1st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_KII_1st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/K22.JPG);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_KII_2st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_KII_2st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/KII%202nd%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SKE_KII_3st_single:hover {
+            position: relative;
+        }
+        
+        #SKE_KII_3st_single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E5%85%AC%E6%BC%94/KII%203rd%20.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN_LIVE:hover {
+            position: relative;
+        }
+        
+        #SDN_LIVE:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(http://i.imgur.com/eYkSSua.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 1st Stage《PARTYが始まるよ》" id="A1st_single">AKB48 Team A 1st Stage《PARTYが始まるよ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 2nd Stage《会いたかった》" id="A2st_single">AKB48 Team A 2nd Stage《会いたかった》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 3rd Stage《誰かのために》" id="A3st_single">AKB48 Team A 3rd Stage《誰かのために》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 4th Stage《ただいま恋愛中》" id="A4st_single">AKB48 Team A 4th Stage《ただいま恋愛中》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 5th Stage《戀愛禁止條例》" id="A5st_single">AKB48 Team A 5th Stage《戀愛禁止條例》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 6th Stage《目撃者》" id="A6st_single">AKB48 Team A 6th Stage《目撃者》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team A 7th Stage《M.T.に捧ぐ》" id="A7st_single">AKB48 Team A 7th Stage《M.T.に捧ぐ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 1st Stage《PARTYが始まるよ》" id="K1st_single">AKB48 Team K 1st Stage《PARTYが始まるよ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 2nd Stage《青春ガールズ》" id="K2st_single">AKB48 Team K 2nd Stage《青春ガールズ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 3rd Stage《脳内パラダイス》" id="K3st_single">AKB48 Team K 3rd Stage《脳内パラダイス》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 4th Stage《最終ベルが鳴る》" id="K4st_single">AKB48 Team K 4th Stage《最終ベルが鳴る》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 5th Stage《逆上がり》" id="K5st_single">AKB48 Team K 5th Stage《逆上がり》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team K 6th Stage《RESET》" id="K6st_single">AKB48 Team K 6th Stage《RESET》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team B 1st Stage《青春ガールズ》" id="B1st_single">AKB48 Team B 1st Stage《青春ガールズ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team B 2nd Stage《会いたかった》" id="B2st_single">AKB48 Team B 2nd Stage《会いたかった》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team B 3rd Stage《パジャマドライブ》" id="B3st_single">AKB48 Team B 3rd Stage《パジャマドライブ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team B 4th Stage《アイドルの夜明け 》" id="B4st_single">AKB48 Team B 4th Stage《アイドルの夜明け 》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team B 5th Stage《シアターの女神》" id="B5st_single">AKB48 Team B 5th Stage《シアターの女神》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 Team 4 1st Stage《僕の太陽》" id="T4_1st_single">AKB48 Team 4 1st Stage《僕の太陽》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 ひまわり組 1st Stage《僕の太陽》" id="H1_1st_single">AKB48 ひまわり組 1st Stage《僕の太陽》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》" id="H1_2st_single">AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team N 1st Stage《誰かのために》" id="TN_1st_single">NMB48 Team N 1st Stage《誰かのために》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team N 2nd Stage《青春ガールズ》" id="TN_2st_single">NMB48 Team N 2nd Stage《青春ガールズ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team N 3rd Stage《ここにだって天使はいる》" id="TN_3st_single">NMB48 Team N 3rd Stage《ここにだって天使はいる》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team M 1st Stage《アイドルの夜明け》" id="TM_1st_single">NMB48 Team M 1st Stage《アイドルの夜明け》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team BII 1st Stage《会いたかった》" id="TBII_1st_single">NMB48 Team BII 1st Stage《会いたかった》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 Team BII 2nd Stage《ただいま恋愛中》" id="TBII_2st_single">NMB48 Team BII 2nd Stage《ただいま恋愛中》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team KII 1st Stage《会いたかった》" id="SKE_KII_1st_single">SKE48 Team KII 1st Stage《会いたかった》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team KII 2nd Stage《手をつなぎながら》" id="SKE_KII_2st_single">SKE48 Team KII 2nd Stage《手をつなぎながら》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team KII 3rd Stage《ラムネの飲み方》" id="SKE_KII_3st_single">SKE48 Team KII 3rd Stage《ラムネの飲み方》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team S 1st Stage《PARTYが始まるよ》" id="SKE_S_1st_single">SKE48 Team S 1st Stage《PARTYが始まるよ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team S 2nd Stage《手をつなぎながら》" id="SKE_S_2st_single">SKE48 Team S 2nd Stage《手をつなぎながら》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 Team S 3rd Stage《制服の芽》" id="SKE_S_3st_single">SKE48 Team S 3rd Stage《制服の芽》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 1st Stage《誘惑のガーター》" id="SDN_LIVE">SDN48 1st Stage《誘惑のガーター》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 1st Stage《PARTYが始まるよ》">AKB48 Team A 1st Stage《PARTYが始まるよ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">02.PARTYが始まるよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">03.Dear my teacher&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">04.毒リンゴを食べさせてBnbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">05.スカート、ひらり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">06. クラスメイト&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">07.あなたとクリスマスイブ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">08.キスはだめよ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">09.星の温度&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">10.桜の花びらたち&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">11.青空のそばにいて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 1st Stage《PARTYが始まるよ》')">12.AKB48&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 2nd Stage《会いたかった》">AKB48 Team A 2nd Stage《会いたかった》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">02 嘆きのフィギュア&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">03 涙の湘南&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">04 会いたかった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">05 渚のCHERRY&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">06 ガラスの I LOVE YOU &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">07 恋のPLAN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">08 背中から抱きしめて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">09 リオの革命&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">10 JESUS&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">11 だけど･･･&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 2nd Stage《会いたかった》')">12 未来の扉&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 3rd Stage《誰かのために》">AKB48 Team A 3rd Stage《誰かのために》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">02 月見草&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">03 Warning&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">04 誕生日の夜&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">05 Bird&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">06 投げキッスで撃ち落せ！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">07 蜃気楼&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">08 ライダー&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">09 制服が邪魔をする&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">10 夏が行っちゃった&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">11 小池&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">12 月のかたち&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">13 誰かのために 〜What can I do for someone&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 3rd Stage《誰かのために》')">14 涙売りの少女.&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 4th Stage《ただいま恋愛中》">AKB48 Team A 4th Stage《ただいま恋愛中》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">02.ただいま　恋愛中.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">03.くまのぬいぐるみ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">04 Only today&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">05 7時12分の初恋&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">06.春が来るまで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">07.純愛のクレッシェンド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">08. Faint.&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">09.帰郷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">10.ダルイカンジ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">11. Mr.Kissman&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">12.君が教えてくれた&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">13.BINGO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">14.軽蔑していた愛情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">15.LOVE CHASE&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 4th Stage《ただいま恋愛中》')">16.なんて素敵な世界に生まれたのだろう&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 5th Stage《戀愛禁止條例》">AKB48 Team A 5th Stage《戀愛禁止條例》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">02 長い光&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">03 スコールの間に&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">04 JK眠り姫&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">05 君に会うたび 恋をする&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">06 黒い天使&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">07 ハート型ウイルス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">08 恋愛禁止条例&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">09 ツンデレ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">10 真夏のクリスマスローズ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">11 Switch&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">12 マルキュー&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">13 ひこうき雲&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">14 あの頃のスニーカー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">15 AKB参上!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">16 ナミダの深呼吸&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 5th Stage《戀愛禁止條例》')">17 大声ダイヤモンド&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 6th Stage《目撃者》">AKB48 Team A 6th Stage《目撃者》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">01 ミニスカートの妖精&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">02 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">03 目撃者&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">04 前人未踏&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">05 いびつな真珠&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">06 憧れのポップスター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">07 腕を組んで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">08 炎上路線&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">09 愛しさのアクセル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">10 ☆の向こう側&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">11 サボテンとゴールドラッシュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">12 美しき者&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">13 アイヲクレ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">14 摩天楼の距離&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">15 命の意味&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">16 I'm crying&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">17 ずっと ずっと&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 6th Stage《目撃者》')">18 Pioneer&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team A 7th Stage《M.T.に捧ぐ》">AKB48 Team A 7th Stage《M.T.に捧ぐ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">01.始まる╱センター 横山由依&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">02.プライムタイム ╱センター 大和田南那&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">03.探してあげる ╱センター 小嶋陽菜&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">04.ラベンダーフィールド╱センター入山杏奈&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">05.リスケ╱小嶋陽菜、島崎遥香 &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">06.制服ビキニ╱大和田南那、山田菜々美、樋渡結依 &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">07.She is Gone╱入山杏奈、白間美瑠、佐々木優佳里、谷口めぐ &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">08.夢でKiss Me╱宮脇咲良&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">09.負男╱宮崎美穂、中西智代梨、小笠原茉由、大家志津香、中村麻里子、岩田華怜 &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">10.月と水鏡╱横山由依 &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">11.門前仲町ダンス╱全員センタ 岩田華怜、入山杏奈 &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">12.今夜、グロリアは誰に泣かれるの？╱全員センター 中西智代梨、宮脇咲良 &nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">13.コピー＆ペースト ╱全員センター 宮脇咲良&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">14.M.T.に捧ぐ╱全員&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">15.ショーは終わらない╱全員センター宮脇咲良&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">16.ウィンクの銃弾╱全員 センター横山由依&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team A 7th Stage《M.T.に捧ぐ》')">17.涙はいつの日か&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 1st Stage《PARTYが始まるよ》">AKB48 Team K 1st Stage《PARTYが始まるよ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">02.PARTYが始まるよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">03.Dear my teacher&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">04.毒リンゴを食べさせて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">05.スカート、ひらり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">06. クラスメイト&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">07.キスはだめよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">08.星の温度&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">09.桜の花びらたち&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">10.青空のそばにいて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 1st Stage《PARTYが始まるよ》')">11.AKB48&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 2nd Stage《青春ガールズ》">AKB48 Team K 2nd Stage《青春ガールズ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">02 青春ガールズ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">03 ビーチサンダル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">04 君が星になるまで&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">05 Blue rose&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">06 禁じられた2人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">07 雨の動物園&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">08 ふしだらな夏&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">09 Don't disturb!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">10 Virgin love&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">11 日付変更線&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">12 僕の打ち上げ花火&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">13 約束よ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">14 転がる石になれ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 2nd Stage《青春ガールズ》')">15 シンデレラは騙されない&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 3rd Stage《脳内パラダイス》">AKB48 Team K 3rd Stage《脳内パラダイス》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">02 友よ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">03 脳内パラダイス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">04 気になる転校生&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">05 泣きながら微笑んで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">06 MARIA&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">07 君はペガサス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">08 ほねほねワルツ (album ver.)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">09 くるくるぱー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">10 クリスマスがいっぱい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">11 シアター・パイレーツ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">12 片思いの卒業式&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">13 花と散れ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 3rd Stage《脳内パラダイス》')">14 草原の奇跡&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 4th Stage《最終ベルが鳴る》">AKB48 Team K 4th Stage《最終ベルが鳴る》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">02.マンモス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">03.最終ベルが鳴る&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">04.ボーイフレンドの作り方&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">05.偉い人になりたくない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">06.リターンマッチ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">07.初恋泥棒&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">08.ごめんね ジュエル&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">09.おしべとめしべと夜の蝶々&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">10.16人姉妹の歌&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">11 Stand up&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">12 Cool girl&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">13.回遊魚のキャパシティ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">14.会いに行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">15.シャムネコ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">16.メロスの道&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 4th Stage《最終ベルが鳴る》')">17.支え&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 5th Stage《逆上がり》">AKB48 Team K 5th Stage《逆上がり》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">02 掌&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">03 逆上がり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">04 否定のレクイエム&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">05 その汗は嘘をつかない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">06 エンドロール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">07 わがままな流れ星&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">08 愛の色&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">09 抱きしめられたら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">10 虫のバラード&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">11 フリしてマネして&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">12 海を渡れ!&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">13 街角のパーティー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">14 ファンレター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">15 不義理&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">16 ハンパなイケメン&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 5th Stage《逆上がり》')">17 To be continued..&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team K 6th Stage《RESET》">AKB48 Team K 6th Stage《RESET》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">01 檸檬の年頃&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">02 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">03 RESET&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">04 洗濯物たち&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">05 彼女になれますか?&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">06 ウッホウッホホ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">07 制服レジスタンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">08 奇跡は間に合わない&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">09 逆転王子様&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">10 明日のためにキスを&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">11 心の端のソファー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">12 毒蜘蛛&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">13 オケラ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">14 ホワイトデーには・・&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">15 ジグソーパズル48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">16 星空のミステイク&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">17 夢の鐘&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team K 6th Stage《RESET》')">18 引っ越しました&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team B 1st Stage《青春ガールズ》">AKB48 Team B 1st Stage《青春ガールズ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">01.overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">02 青春ガールズ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">03 ビーチサンダル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">04 君が星になるまで&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">05 Blue rose&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">06 禁じられた2人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">07 雨の動物園&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">08 ふしだらな夏&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">09 Don't disturb!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">10 Virgin love&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">11 日付変更線&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">12 僕の打ち上げ花火&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">13 約束よ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">14 転がる石になれ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 1st Stage《青春ガールズ》')">15 シンデレラは騙されない&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team B 2nd Stage《会いたかった》">AKB48 Team B 2nd Stage《会いたかった》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">02 嘆きのフィギュア&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">03 涙の湘南&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">04 会いたかった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">05 渚のCHERRY&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">06 ガラスの I LOVE YOU &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">07 恋のPLAN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">08 背中から抱きしめて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">09 リオの革命&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">10 JESUS&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">11 だけど･･･&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">12. Dear my teacher&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">13.未来の扉&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">14. AKB48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 2nd Stage《会いたかった》')">15. スカート、ひらり&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team B 3rd Stage《パジャマドライブ》">AKB48 Team B 3rd Stage《パジャマドライブ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">01. overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">02. 初日&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">03.必殺テレポート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">04. ご機嫌ななめなマーメイド&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">05. 2人のりの自転車&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">06.天使のしっぽ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">07. パジャマドライブ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">08. 純情主義&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">09. てもでもの涙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">10. 鏡の中のジャンヌ・ダルク&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">11. Two years later&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">12.命の使い道&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">13.キスして損しちゃった&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">14. 僕の桜&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">15. ワッショイB!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">16. 水夫は嵐に夢を見る&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 3rd Stage《パジャマドライブ》')">17. 白いシャツ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team B 4th Stage《アイドルの夜明け 》">AKB48 Team B 4th Stage《アイドルの夜明け 》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">01. overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">02 アイドルの夜明け&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">03 みなさんもご一緒に&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">04 春一番が吹く頃&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">05 拳の正義&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">06 殘念少女&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">07 口移しのチョコレート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">08 片思いの対角線&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">09 天國野郎&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">10 愛しきナターシャ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">11 女子高生はやめられない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">12 好きと言えば良かった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">13 そばかすのキス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">14 タンポポの決心&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">15. B Stars&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">16 橫須賀カーブ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 4th Stage《アイドルの夜明け 》')">17 アリガトウ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team B 5th Stage《シアターの女神》">AKB48 Team B 5th Stage《シアターの女神》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">01. ロマンスかくれんぼ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">02. overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">03. 勇気のハンマー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">04. 隕石の確率&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">05. 愛のストリッパー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">06. シアターの女神&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">07. 初恋よ、こんにちは&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">08. 嵐の夜には&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">09. キャンディー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">10.ロッカルームボイ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">11. 夜風の仕業&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">12. 100メートルコンビニ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">13. 好き好き好き.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">14. サヨナラのカナシバリ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">15. 潮風の招待状&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">16. オネストマン&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">17. TeamB推し&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team B 5th Stage《シアターの女神》')">18. 僕たちの紙飛行機&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 Team 4 1st Stage《僕の太陽》">AKB48 Team 4 1st Stage《僕の太陽》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">02 Dreamin' girls&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">03 RUN RUN RUN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">04 未来の果実&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">05 ビバ！ハリケーン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">06 アイドルなんて呼ばないで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">07 僕とジュリエットとジェットコースター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">08 ヒグラシノコイ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">09 愛しさのdefense&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">10 向日葵&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">11 竹内先輩&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">12 そんなこんなわけで&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">13 デジャビュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">14 夕陽を見ているか&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">15 Lay down&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">16 BINGO!&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 Team 4 1st Stage《僕の太陽》')">17 僕の太陽&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 ひまわり組 1st Stage《僕の太陽》">AKB48 ひまわり組 1st Stage《僕の太陽》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">02 Dreamin' girls&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">03 RUN RUN RUN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">04 未来の果実&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">05 ビバ！ハリケーン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">06 アイドルなんて呼ばないで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">07 僕とジュリエットとジェットコースター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">08 ヒグラシノコイ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">09 愛しさのdefense&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">10 向日葵&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">11 竹内先輩&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">12 そんなこんなわけで&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">13 デジャビュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">14 夕陽を見ているか&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">15 Lay down&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">16 BINGO!&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 1st Stage《僕の太陽》')">17 僕の太陽&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》">AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">01 overture&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">02. ロマンス、イラネ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">03. 夢を死なせるわけにいかない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">04.Let’s get “あと1センチ”&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">05. 愛とプライド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">06. Bye Bye Bye&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">07.初めてのジェリービーンズ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">08.となりのバナナ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">09.記憶のジレンマ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">10. Confession&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">11.森へ行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">12.青春の稲妻&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">13.生きるって素晴らしい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">14.愛の毛布&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">15.ロックだよ、人生は…&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">16. 50%&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKB48 ひまわり組 2nd Stage《夢を死なせるわけにいかない》')">17.ハートが風邪をひいた夜&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team N 1st Stage《誰かのために》">NMB48 Team N 1st Stage《誰かのために》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">01 overture (NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">02 月見草&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">03 Warning&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">04 誕生日の夜&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">05 Bird&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">06 投げキッスで撃ち落せ！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">07 蜃気楼&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">08 ライダー&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">09 制服が邪魔をする&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">10 夏が行っちゃった&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">11 小池&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">12 月のかたち&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">13 誰かのために 〜What can I do for someone&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 1st Stage《誰かのために》')">14 涙売りの少女.&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team N 2nd Stage《青春ガールズ》">NMB48 Team N 2nd Stage《青春ガールズ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">01.overture (NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">02 青春ガールズ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">03 ビーチサンダル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">04 君が星になるまで&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">05 Blue rose&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">06 禁じられた2人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">07 雨の動物園&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">08 ふしだらな夏&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">09 Don't disturb!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">10 Virgin love&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">11 日付変更線&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">12 僕の打ち上げ花火&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">13 約束よ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">14 転がる石になれ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 2nd Stage《青春ガールズ》')">15 シンデレラは騙されない&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team N 3rd Stage《ここにだって天使はいる》">NMB48 Team N 3rd Stage《ここにだって天使はいる》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">01 overture(NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">02 青い月が見てるから&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">03 Radio name&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">04 ここにだって天使はいる&nbsp;</a></td>
+
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">05 カトレアの花を見る度に思い出す&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">06 夢のdead body&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">07 何度も狙え!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">08 おNEWの上履き&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">09 この世界が雪の中に埋もれる前に&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">10 ジッパー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">11 初めての星&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">12 100年先でも&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">13 リボンなんて似合わない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">14 ドガとバレリーナ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">15 情熱ハイウェイ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">16 少し苦い人生相談&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team N 3rd Stage《ここにだって天使はいる》')">17 不毛の土地を満開に...&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team M 1st Stage《アイドルの夜明け》">NMB48 Team M 1st Stage《アイドルの夜明け》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">01. overture(NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">02 アイドルの夜明け&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">03 みなさんもご一緒に&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">04 春一番が吹く頃&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">05 拳の正義&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">06 殘念少女&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">07 口移しのチョコレート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">08 片思いの対角線&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">09 天國野郎&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">10 愛しきナターシャ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">11 女子高生はやめられない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">12 好きと言えば良かった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">13 そばかすのキス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">14 タンポポの決心&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">15 橫須賀カーブ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team M 1st Stage《アイドルの夜明け》')">16 アリガトウ&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team BII 1st Stage《会いたかった》">NMB48 Team BII 1st Stage《会いたかった》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">01 overture(NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">02 嘆きのフィギュア&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">03 涙の湘南&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">04 会いたかった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">05 渚のCHERRY&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">06 ガラスの I LOVE YOU &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">07 恋のPLAN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">08 背中から抱きしめて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">09 リオの革命&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">10 JESUS&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">11 だけど･･･&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">12 Dear my teacher&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">13 未来の扉&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">14 NMB48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 1st Stage《会いたかった》')">15 スカート、ひらり&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 Team BII 2nd Stage《ただいま恋愛中》">NMB48 Team BII 2nd Stage《ただいま恋愛中》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">01 overture(NMB48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">02.ただいま　恋愛中.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">03.くまのぬいぐるみ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">04 Only today&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">05 7時12分の初恋&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">06.春が来るまで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">07.純愛のクレッシェンド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">08. Faint.&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">09.帰郷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">10.ダルイカンジ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">11. Mr.Kissman&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">12.君が教えてくれた&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">13.BINGO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">14.軽蔑していた愛情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">15.LOVE CHASE&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 Team BII 2nd Stage《ただいま恋愛中》')">16.なんて素敵な世界に生まれたのだろう&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team KII 1st Stage《会いたかった》">SKE48 Team KII 1st Stage《会いたかった》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">overture (SKE48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">02 嘆きのフィギュア&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">03 涙の湘南&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">04 会いたかった&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">05 渚のCHERRY&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">06 ガラスの I LOVE YOU &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">07 恋のPLAN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">08 背中から抱きしめて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">09 リオの革命&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">10 JESUS&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">11 だけど･･･&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">12. 桜の花びらたち&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">13 未来の扉&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">14 SKE48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">15 スカート、ひらり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">16. Dear my teacher&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 1st Stage《会いたかった》')">17. river&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team KII 2nd Stage《手をつなぎながら》">SKE48 Team KII 2nd Stage《手をつなぎながら》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">01 overture (SKE48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">02 僕らの風&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">03 マンゴー No.2&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">04 手をつなぎながら&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">05 チャイムはLOVE SONG&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">06 Glory days&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">07 この胸のバーコード&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">08 ウィンブルドンへ連れて行って&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">09 雨のピアニスト&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">10 チョコの行方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">11 Innocence&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">12 ロマンスロケット&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">13 恋の傾向と対策&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">14 大好き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">15 ロープの友情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">16 火曜日の夜、水曜日の朝&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 2nd Stage《手をつなぎながら》')">17 遠くにいても&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team KII 3rd Stage《ラムネの飲み方》">SKE48 Team KII 3rd Stage《ラムネの飲み方》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">01 overture（SKE48 ver.）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">02 兆し&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">03 校庭の仔犬&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">04 ディスコ保健室&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">05 お待たせSet list&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">06 クロス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">07 フィンランド・ミラクル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">08 眼差しサヨナラ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">09 嘘つきなダチョウ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">10 Nice to meet you!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">11 孤独なバレリーナ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">12 今 君といられること&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">13 ウィニングボール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">14 握手の愛&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">15 ボウリング願望&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">16. Dear my teacher&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">16 16色の夢クレヨン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">17 ラムネの飲み方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team KII 3rd Stage《ラムネの飲み方》')">18 單曲混合曲&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team S 1st Stage《PARTYが始まるよ》">SKE48 Team S 1st Stage《PARTYが始まるよ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">01.overture（SKE48 ver.）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">02.PARTYが始まるよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">03.Dear my teacher&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">04.毒リンゴを食べさせてBnbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">05.スカート、ひらり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">06. クラスメイト&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">07.あなたとクリスマスイブ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">08.キスはだめよ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">09.星の温度&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">10.桜の花びらたち&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">11.青空のそばにいて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">12.SKE48&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">13.大声ダイヤモンド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">14.桜の花びらたち (アンコール Ver.) &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 1st Stage《PARTYが始まるよ》')">15.overture (ダンス Ver.) &nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team S 2nd Stage《手をつなぎながら》">SKE48 Team S 2nd Stage《手をつなぎながら》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">01 overture (SKE48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">02 僕らの風&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">03 マンゴー No.2&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">04 手をつなぎながら&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">05 チャイムはLOVE SONG&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">06 Glory days&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">07 この胸のバーコード&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">08 ウィンブルドンへ連れて行って&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">09 雨のピアニスト&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">10 チョコの行方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">11 Innocence&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">12 ロマンスロケット&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">13 恋の傾向と対策&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">14 大好き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">15 ロープの友情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">16 火曜日の夜、水曜日の朝&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 2nd Stage《手をつなぎながら》')">17 遠くにいても&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 Team S 3rd Stage《制服の芽》">SKE48 Team S 3rd Stage《制服の芽》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">01 overture (SKE48 ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">02 恋を語る詩人になれなくて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">03 合格Kiss&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">04 アンテナ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">05 制服の芽&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">06 思い出以上&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">07 狼とプライド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">08 女の子の第六感&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">09 枯葉のステーション&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">10 万華鏡&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">11 ジェラシーのアリバイ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">12 Doubt!&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">13 仲間の歌&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">14 水のないプール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">15 楽園の階段&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">16 ピノキオ軍&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 Team S 3rd Stage《制服の芽》')">17 手紙のこと&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 1st Stage《誘惑のガーター》">SDN48 1st Stage《誘惑のガーター》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">01 Overture (SDN48 Ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">02 Saturday Night Party&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">03 Never!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">04 Black Boy&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">05 誘惑のガーター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">06 I'm Sure..&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">07 オールイン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">08 じゃじゃ馬レディー&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">09 ガンバリーナ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">10 普通のあなた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">11 Best By&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">12 愛されるために&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">13 孤独なランナー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">14 逃避行&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Stage《誘惑のガーター》')">15 ヴァンパイア計画&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+{% endblock content %}

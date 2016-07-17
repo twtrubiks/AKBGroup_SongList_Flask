@@ -1,0 +1,1551 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M09.jpg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M12.jpg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E6%8E%8C%E3%81%8C%E8%AA%9E%E3%82%8B%E3%81%93%E3%81%A8.jpg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/asd.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/other1.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/other2.jpeg);
+            background-size: auto 45%, auto 45%, auto 38%, auto 44%, auto 44%, auto 35%;
+            background-position: left top, right top, 20% 65%, 83% 60%, left bottom, right bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        #Cat_AKB:hover {
+            position: relative;
+        }
+        
+        #Cat_AKB:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Cat_B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp1:hover {
+            position: relative;
+        }
+        
+        #Team_sp1:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp2:hover {
+            position: relative;
+        }
+        
+        #Team_sp2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M02.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp3:hover {
+            position: relative;
+        }
+        
+        #Team_sp3:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M03.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp4:hover {
+            position: relative;
+        }
+        
+        #Team_sp4:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M04.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp5:hover {
+            position: relative;
+        }
+        
+        #Team_sp5:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M05.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp6:hover {
+            position: relative;
+        }
+        
+        #Team_sp6:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M06.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp7:hover {
+            position: relative;
+        }
+        
+        #Team_sp7:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M07.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp8:hover {
+            position: relative;
+        }
+        
+        #Team_sp8:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M08.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp9:hover {
+            position: relative;
+        }
+        
+        #Team_sp9:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M09.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp10:hover {
+            position: relative;
+        }
+        
+        #Team_sp10:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M10.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp11:hover {
+            position: relative;
+        }
+        
+        #Team_sp11:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M11.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp12:hover {
+            position: relative;
+        }
+        
+        #Team_sp12:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M12.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp13:hover {
+            position: relative;
+        }
+        
+        #Team_sp13:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M13.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp14:hover {
+            position: relative;
+        }
+        
+        #Team_sp14:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M14.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp15:hover {
+            position: relative;
+        }
+        
+        #Team_sp15:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M15.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp16:hover {
+            position: relative;
+        }
+        
+        #Team_sp16:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M16.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp1_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp1_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp2_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp2_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M02_2.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp3_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp3_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M03_2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp4_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp4_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp5_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp5_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_5.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp6_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp6_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_6.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp7_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp7_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_7.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp8_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp8_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_8.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp9_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp9_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_9.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp10_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp10_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_10.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp11_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp11_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_11.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp12_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp12_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_12.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp13_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp13_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M13_2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp14_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp14_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M14_2.JPG);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp15_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp15_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M15_2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Team_sp16_2:hover {
+            position: relative;
+        }
+        
+        #Team_sp16_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB48%E3%83%81%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA/M01_16.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other1:hover {
+            position: relative;
+        }
+        
+        #Other1:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/original.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NONAME_1:hover {
+            position: relative;
+        }
+        
+        #NONAME_1:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/NO%20NAME/TT.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NONAME_2:hover {
+            position: relative;
+        }
+        
+        #NONAME_2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/NO%20NAME/folder156.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #relief:hover {
+            position: relative;
+        }
+        
+        #relief:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E6%8E%8C%E3%81%8C%E8%AA%9E%E3%82%8B%E3%81%93%E3%81%A8.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other2:hover {
+            position: relative;
+        }
+        
+        #Other2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/AKB%E5%96%AE%E6%9B%B2/5.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #LOVEWAE:hover {
+            position: relative;
+        }
+        
+        #LOVEWAE:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/fold123er.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Chocolove:hover {
+            position: relative;
+        }
+        
+        #Chocolove:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/AAS.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ICE:hover {
+            position: relative;
+        }
+        
+        #ICE:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/fold1456er.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ZZ:hover {
+            position: relative;
+        }
+        
+        #ZZ:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/img57177178.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other3:hover {
+            position: relative;
+        }
+        
+        #Other3:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/folder1123.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other4:hover {
+            position: relative;
+        }
+        
+        #Other4:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/folde12587r.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other5:hover {
+            position: relative;
+        }
+        
+        #Other5:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/nattocd_.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other6:hover {
+            position: relative;
+        }
+        
+        #Other6:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/8084nattoman_cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other7:hover {
+            position: relative;
+        }
+        
+        #Other7:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/s7007188.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other8:hover {
+            position: relative;
+        }
+        
+        #Other8:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/fold4Her.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other9:hover {
+            position: relative;
+        }
+        
+        #Other9:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/0dcc0b3d.jpeg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other10:hover {
+            position: relative;
+        }
+        
+        #Other10:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/coverC.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #Other11:hover {
+            position: relative;
+        }
+        
+        #Other11:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98%28%E8%88%8A%29/folder12.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(http://i.imgur.com/eYkSSua.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》" id="Cat_AKB">ニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《重力シンパシー》" id="Team_sp1">チームサプライズ《重力シンパシー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《水曜日のアリス》" id="Team_sp2">チームサプライズ《水曜日のアリス》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《そのままで》" id="Team_sp3">チームサプライズ《そのままで》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《涙に沈む太陽》" id="Team_sp4">チームサプライズ《涙に沈む太陽》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《君のc∕w》" id="Team_sp5">チームサプライズ《君のc∕w》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《1994年の雷鸣》" id="Team_sp6">チームサプライズ《1994年の雷鸣》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《思い出す度につらくなる》" id="Team_sp7">チームサプライズ《思い出す度につらくなる》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《お手上げララバイ》" id="Team_sp8">チームサプライズ《お手上げララバイ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《キンモクセイ》" id="Team_sp9">チームサプライズ《キンモクセイ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《素敵な三角関係》" id="Team_sp10">チームサプライズ《素敵な三角関係》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《旅立ちのとき》" id="Team_sp11">チームサプライズ《旅立ちのとき》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《AKBフェスティバル》" id="Team_sp12">チームサプライズ《AKBフェスティバル》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《キミが思ってるより…》" id="Team_sp13">チームサプライズ《キミが思ってるより…》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《デッサン》" id="Team_sp14">チームサプライズ《デッサン》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《ハートのベクトル》" id="Team_sp15">チームサプライズ《ハートのベクトル》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《女神はどこで微笑む？》" id="Team_sp16">チームサプライズ《女神はどこで微笑む？》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《未来が目にしみる》" id="Team_sp1_2">チームサプライズ《未来が目にしみる》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《ハングリーライオン》" id="Team_sp2_2">チームサプライズ《ハングリーライオン》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《夢を見るなら》" id="Team_sp3_2">チームサプライズ《夢を見るなら》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《初恋の鍵》" id="Team_sp4_2">チームサプライズ《初恋の鍵》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《愛しさを丸めて》" id="Team_sp5_2">チームサプライズ《愛しさを丸めて》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《幼稚園の先生》" id="Team_sp6_2">チームサプライズ《幼稚園の先生》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《Hell or Heaven》" id="Team_sp7_2">チームサプライズ《Hell or Heaven》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《最後にアイスミルクを飲んだのはいつだろう？》" id="Team_sp8_2">チームサプライズ《最後にアイスミルクを飲んだのはいつだろう？》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《ときめきアンティーク》" id="Team_sp9_2">チームサプライズ《ときめきアンティーク》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《誰が2人を出会わせたのか?》" id="Team_sp10_2">チームサプライズ《誰が2人を出会わせたのか?》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《失恋同盟》" id="Team_sp11_2">チームサプライズ《失恋同盟》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《バラの儀式》" id="Team_sp12_2">チームサプライズ《バラの儀式》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《美 し い 狩 り》" id="Team_sp13_2">チームサプライズ《美 し い 狩 り》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《哲学の森》" id="Team_sp14_2">チームサプライズ《哲学の森》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《愛の川》" id="Team_sp15_2">チームサプライズ《愛の川》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームサプライズ《ほっぺ、ツネル》" id="Team_sp16_2">チームサプライズ《ほっぺ、ツネル》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《掌が語ること》" id="relief">《掌が語ること》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《花は咲く》" id="Other11">《花は咲く》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《シェキナベイベー》" id="Other1">《シェキナベイベー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNO NAME 1st Single《希望について》" id="NONAME_1">NO NAME 1st Single《希望について》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNO NAME 2nd Single《この涙を君に捧ぐ》" id="NONAME_2">NO NAME 2nd Single《この涙を君に捧ぐ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームドラゴン《心の羽根》" id="Other2">チームドラゴン《心の羽根》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDQueen & Elizabeth《Love♡Wars》" id="LOVEWAE">Queen & Elizabeth《Love♡Wars》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDChocolove 1st album《Dessert》" id="Chocolove">Chocolove 1st album《Dessert》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDICE《アイサレルトイウコト》" id="ICE">ICE《アイサレルトイウコト》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDチームZ オリジナル・サウンドトラック《恋のお縄》" id="ZZ">チームZ オリジナル・サウンドトラック《恋のお縄》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《初恋は実らない》" id="Other3">《初恋は実らない》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《かたつむり》" id="Other4">《かたつむり》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《ナットウエンジェル》" id="Other5">《ナットウエンジェル》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《ナットウマン》" id="Other6">《ナットウマン》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《突っ張る理由》" id="Other7">《突っ張る理由》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《ほねほねワルツ》" id="Other9">《ほねほねワルツ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID《甘い股関節》" id="Other8">《甘い股関節》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDAKBアイドリング!!!《チューしようぜ!》" id="Other10">AKBアイドリング!!!《チューしようぜ!》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》">ニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》')">01. アイドルはウーニャニャの件&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ニャーKB with ツチノコパンダ《アイドルはウーニャニャの件》')">02. 不幸中の幸い少女&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《重力シンパシー》">チームサプライズ《重力シンパシー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《重力シンパシー》')">01 重力シンパシー&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《水曜日のアリス》">チームサプライズ《水曜日のアリス》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《水曜日のアリス》')">01 水曜日のアリス&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《そのままで》">チームサプライズ《そのままで》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《そのままで》')">01 そのままで&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《涙に沈む太陽》">チームサプライズ《涙に沈む太陽》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《涙に沈む太陽》')">01 涙に沈む太陽&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《君のc∕w》">チームサプライズ《君のc∕w》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《君のc∕w》')">01 君のc∕w&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《1994年の雷鸣》">チームサプライズ《1994年の雷鸣》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《1994年の雷鸣》')">01 1994年の雷鸣&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《思い出す度につらくなる》">チームサプライズ《思い出す度につらくなる》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《思い出す度につらくなる》')">01 思い出す度につらくなる&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《お手上げララバイ》">チームサプライズ《お手上げララバイ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《お手上げララバイ》')">01 お手上げララバイ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《キンモクセイ》">チームサプライズ《キンモクセイ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《キンモクセイ》')">01 キンモクセイ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《素敵な三角関係》">チームサプライズ《素敵な三角関係》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《素敵な三角関係》')">01 素敵な三角関係&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《旅立ちのとき》">チームサプライズ《旅立ちのとき》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《旅立ちのとき》')">01 旅立ちのとき&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《AKBフェスティバル》">チームサプライズ《AKBフェスティバル》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《AKBフェスティバル》')">01 AKBフェスティバル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《キミが思ってるより…》">チームサプライズ《キミが思ってるより…》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《キミが思ってるより…》')">01 キミが思ってるより…&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《デッサン》">チームサプライズ《デッサン》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《デッサン》')">01 デッサン&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《ハートのベクトル》">チームサプライズ《ハートのベクトル》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《ハートのベクトル》')">01 ハートのベクトル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《女神はどこで微笑む？》">チームサプライズ《女神はどこで微笑む？》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《女神はどこで微笑む？》')">01 女神はどこで微笑む？&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《未来が目にしみる》">チームサプライズ《未来が目にしみる》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《未来が目にしみる》')">01 未来が目にしみる&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《ハングリーライオン》">チームサプライズ《ハングリーライオン》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《ハングリーライオン》')">01 ハングリーライオン&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《夢を見るなら》">チームサプライズ《夢を見るなら》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《夢を見るなら》')">01 夢を見るなら&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《初恋の鍵》">チームサプライズ《初恋の鍵》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《初恋の鍵》')">01 初恋の鍵&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《愛しさを丸めて》">チームサプライズ《愛しさを丸めて》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《愛しさを丸めて》')">01 愛しさを丸めて&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《幼稚園の先生》">チームサプライズ《幼稚園の先生》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《幼稚園の先生》')">01 幼稚園の先生&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《Hell or Heaven》">チームサプライズ《Hell or Heaven》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《Hell or Heaven》')">01 Hell or Heaven&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《最後にアイスミルクを飲んだのはいつだろう？》">チームサプライズ《最後にアイスミルクを飲んだのはいつだろう?》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《最後にアイスミルクを飲んだのはいつだろう?》')">01 最後にアイスミルクを飲んだのはいつだろう?&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《ときめきアンティーク》">チームサプライズ《ときめきアンティーク》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《ときめきアンティーク》')">01 ときめきアンティーク&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《誰が2人を出会わせたのか?》">チームサプライズ《誰が2人を出会わせたのか?》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《誰が2人を出会わせたのか?》')">01 誰が2人を出会わせたのか?&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《失恋同盟》"> チームサプライズ《失恋同盟》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《失恋同盟》')">01 失恋同盟&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《バラの儀式》">チームサプライズ《バラの儀式》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《バラの儀式》')">01 バラの儀式&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《美 し い 狩 り》">チームサプライズ《美 し い 狩 り》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《美 し い 狩 り》')">01 美 し い 狩 り&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《哲学の森》">チームサプライズ《哲学の森》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《哲学の森》')">01 哲学の森&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《ほっぺ、ツネル》">チームサプライズ《ほっぺ、ツネル》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《ほっぺ、ツネル》')">01 ほっぺ、ツネル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームサプライズ《愛の川》">チームサプライズ《愛の川》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームサプライズ《愛の川》')">01 愛の川&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《掌が語ること》">《掌が語ること》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《掌が語ること》')">01 掌が語ること&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《花は咲く》">《花は咲く》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《花は咲く》')">01 花は咲く - 岩田華怜&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《シェキナベイベー》">《シェキナベイベー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《シェキナベイベー》')">01 シェキナベイベー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《シェキナベイベー》')">02 Satisfied&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNO NAME 1st Single《希望について》">NO NAME 1st Single《希望について》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 1st Single《希望について》')">01 希望について&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 1st Single《希望について》')">02 夢は何度も生まれ変わる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 1st Single《希望について》')">03 虹の列車&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNO NAME 2nd Single《この涙を君に捧ぐ》">NO NAME 2nd Single《この涙を君に捧ぐ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">01 この涙を君に捧ぐ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">02 主なきその声&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">03 てもでもの淚&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">04 大声ダイヤモンド NO NAME ver&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">03 この涙を君に捧ぐ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">03 少女たちよ NO NAME ver.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NO NAME 2nd Single《この涙を君に捧ぐ》')">03 初日 NO NAME ver&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームドラゴン《心の羽根》">チームドラゴン《心の羽根》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームドラゴン《心の羽根》')">01 心の羽根&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームドラゴン《心の羽根》')">02 世界中の雨&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDQueen & Elizabeth《Love♡Wars》">Queen & Elizabeth《Love♡Wars》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Queen & Elizabeth《Love♡Wars》')">01 Love Wars&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Queen & Elizabeth《Love♡Wars》')">02 Love Wars (ACO Edit)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Queen & Elizabeth《Love♡Wars》')">03 Love Wars (Tomomi Itano solo Edit)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Queen & Elizabeth《Love♡Wars》')">04 Love Wars (Tomomi Kasai solo Edit)&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDChocolove 1st album《Dessert》">Chocolove 1st album《Dessert》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">01 明日は明日の君が生まれる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">02 チョコレート(rina-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">03 チョコレート(sae-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">04 チョコレート(sayaka-solo)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">05 メールの涙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">06 彼のキッチン(rina-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">07 彼のキッチン(sae-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">08 彼のキッチン(sayaka-solo)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">09 Waves&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">10 Waves(rina-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">11 Waves(sae-solo)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">12 Waves(sayaka-solo)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Chocolove 1st album《Dessert》')">13 明日は明日の君が生まれる (rina-mix)&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDICE《アイサレルトイウコト》">ICE《アイサレルトイウコト》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ICE《アイサレルトイウコト》')">01 アイサレルトイウコト Complete Ver&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ICE《アイサレルトイウコト》')">02 アイサレルトイウコト TV ver&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDチームZ オリジナル・サウンドトラック《恋のお縄》">チームZ オリジナル・サウンドトラック《恋のお縄》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームZ オリジナル・サウンドトラック《恋のお縄》')">01 恋のお縄&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームZ オリジナル・サウンドトラック《恋のお縄》')">02 私の彼氏は銭形平次&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームZ オリジナル・サウンドトラック《恋のお縄》')">03 会いたかった ～お江戸Ver.～&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('チームZ オリジナル・サウンドトラック《恋のお縄》')">04 銭形平次 ～TEAM Z ver.～&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《初恋は実らない》">《初恋は実らない》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《初恋は実らない》')">01 初恋は実らない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《初恋は実らない》')">02 かたつむり ～おじゃる丸シスターズ・バージョン～&nbsp;</a></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《かたつむり》">《かたつむり》-</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《かたつむり》')">01 かたつむり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《かたつむり》')">02 芋虫ジョニー&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《ナットウエンジェル》">《ナットウエンジェル》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《ナットウエンジェル》')">01 ナットウエンジェル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《ナットウマン》">《ナットウマン》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《ナットウマン》')">01 ナットウマン&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4"id="ID《突っ張る理由》">《突っ張る理由》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《突っ張る理由》')">01 突っ張る理由&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《突っ張る理由》')">02 友よ　夜明けに待ち合わせよう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《突っ張る理由》')">03 なぜ？の嵐&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《突っ張る理由》')">04 さよならのめまい&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《突っ張る理由》')">05 ヴァージンハート&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《ほねほねワルツ》">《ほねほねワルツ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《ほねほねワルツ》')">01 ほねほねワルツ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《ほねほねワルツ》')">02 くじらのバス&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID《甘い股関節》">《甘い股関節》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('《甘い股関節》')">01 甘い股関節&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDAKBアイドリング!!!《チューしようぜ!》">AKBアイドリング!!!《チューしようぜ!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKBアイドリング!!!《チューしようぜ!》')">01 チューしようぜ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKBアイドリング!!!《チューしようぜ!》')">02 モテ期のうた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('AKBアイドリング!!!《チューしようぜ!》')">03 会いたかった&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

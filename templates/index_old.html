@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style_index.css') }}">
+    <script src="{{ url_for('static', filename='javascripts/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascripts/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascripts/index_jquery.js') }}"></script>
+    <title>歌曲列表</title>
+
+    <script type="text/javascript">
+        $(function () {
+            var $pxs_container = $('#pxs_container');
+            $pxs_container.parallaxSlider();
+        });
+        function to_list() {
+            location.href = "list";
+        }
+        function to_FB() {
+            location.href = "https://www.facebook.com/groups/617521948265617/";
+        }
+        function to_FeedbackForm() {
+            location.href = "https://docs.google.com/spreadsheet/embeddedform?formkey=dGZXN21FLXlic1Vaenk0UFBvWjBOZmc6MQ";
+        }
+    </script>
+</head>
+
+<body>
+<div class="wrapper">
+    <h1>歌曲列表</h1>
+</div>
+<div id="pxs_container" class="pxs_container">
+    <div class="pxs_bg">
+        <div class="pxs_bg2"></div>
+    </div>
+    <div class="pxs_loading">Loading images...</div>
+    <div class="pxs_slider_wrapper">
+        <ul class="pxs_slider">
+            <li>
+                <a href="akb48"><img src="{{ url_for('static', filename='images/index/AKB48.png') }}" title="AKB48"></a>
+            </li>
+            <li>
+                <a href="ske48"><img src="{{ url_for('static', filename='images/index/SKE48.png') }}" title="SKE48"></a>
+            </li>
+            <li>
+                <a href="nmb48"><img src="{{ url_for('static', filename='images/index/NMB48.png') }}" title="NMB48"></a>
+            </li>
+            <li>
+                <a href="hkt48"><img src="{{ url_for('static', filename='images/index/HKT48.png') }}" title="HKT48"></a>
+            </li>
+            <li>
+                <a href="sdn48"><img src="{{ url_for('static', filename='images/index/SDN48.png') }}" title="SDN48"></a>
+            </li>
+            <li>
+                <a href="nogizaka46"><img src="{{ url_for('static', filename='images/index/N46.png') }}" title="乃木坂46"></a>
+            </li>
+            <li>
+                <a href="keyakizaka46"><img src="{{ url_for('static', filename='images/index/Keyakizaka.png') }}" title="欅坂46"></a>
+            </li>
+            <li>
+                <a href="live"><img src="{{ url_for('static', filename='images/index/LIVE.png') }}" title="公演"></a>
+            </li>
+            <li>
+                <a href="sub_group"><img src="{{ url_for('static', filename='images/index/sub-Group.png') }}" title="子團"></a>
+            </li>
+            <li>
+                <a href="solo"><img src="{{ url_for('static', filename='images/index/SOLO.png') }}" title="SOLO"></a>
+            </li>
+            <li>
+                <a href="sp"><img src="{{ url_for('static', filename='images/index/SP.png') }}" title="期間限定組合"></a>
+            </li>
+            <li>
+                <a href="other"><img src="{{ url_for('static', filename='images/index/Other.png') }}" title="其他"></a>
+            </li>
+        </ul>
+        <div class="pxs_navigation">
+            <span class="pxs_next"></span>
+            <span class="pxs_prev"></span>
+        </div>
+        <ul class="pxs_thumbnails">
+            <li><img src="{{ url_for('static', filename='images/thumbs/AKB48.jpg') }}" title="AKB48"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/SKE48.jpg') }}" title="SKE48"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/NMB48.jpg') }}" title="NMB48"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/HKT48.jpg') }}" title="HKT48"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/SDN48.jpg') }}" title="SDN48"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/N46.jpg') }}" title="乃木坂46"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/Keyakizaka.jpg') }}" title="欅坂46"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/LIVE.jpg') }}" title="公演"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/sub-Group.jpg') }}" title="子團"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/SOLO.jpg') }}" title="SOLO"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/SP.jpg') }}" title="期間限定組合"></li>
+            <li><img src="{{ url_for('static', filename='images/thumbs/Other.jpg') }}" title="其他"></li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <input type="button" class="button" value="加入FB社團" onclick="to_FB()">
+    <input type="button" class="button" value="已點播歌曲" onclick="to_list()">
+    <input type="button" class="button" value="意見表" onclick="to_FeedbackForm()">
+</div>
+</body>
+
+</html>

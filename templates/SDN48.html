@@ -1,0 +1,236 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/sdn.jpg);
+            background-attachment: fixed;
+            background-repeat: repeat;
+        }
+        
+        #SDN1st_Album:hover {
+            position: relative;
+        }
+        
+        #SDN1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/folder55.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN1st_Single:hover {
+            position: relative;
+        }
+        
+        #SDN1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/cover2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN2st_Single:hover {
+            position: relative;
+        }
+        
+        #SDN2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/Type%20A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN3st_Single:hover {
+            position: relative;
+        }
+        
+        #SDN3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/Type%20AA.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN4st_Single:hover {
+            position: relative;
+        }
+        
+        #SDN4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/Front_B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #SDN5st_Single:hover {
+            position: relative;
+        }
+        
+        #SDN5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/5532345420120229111419075.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SDN/sdn.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 1st Album《Next Encore》" id="SDN1st_Album">SDN48 1st Album《Next Encore》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 1st Single《GAGAGA》" id="SDN1st_Single">SDN48 1st Single《GAGAGA》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 2nd Single《愛、チュセヨ》" id="SDN2st_Single">SDN48 2nd Single《愛、チュセヨ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 3rd Single《MIN・MIN・MIN》" id="SDN3st_Single">SDN48 3rd Single《MIN・MIN・MIN》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 4th Single《口説きながら麻布十番 duet with みの もんた》" id="SDN4st_Single">SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSDN48 5th Single《負け惜しみコングラチュレーション》" id="SDN5st_Single">SDN48 5th Single《負け惜しみコングラチュレーション》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 1st Album《Next Encore》">SDN48 1st Album《Next Encore》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">01.GAGAGA.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">02.孤独なランナー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">03.エロスのトリガー-アンダーガールズA&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">03.佐渡へ渡る-アンダーガールズB&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">04.愛、チュセヨ.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">05.天国のドアは3回目のベルで開く-アンダーガールズA.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">06.淡路島のタマネギ-アンダーガールズB.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">07.愛よ　動かないで-レイチェル.&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">08.愛、チュセヨ.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">09.MIN-MIN-MIN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">10.おねだりシャンパン-アンダーガールズA&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">11.アバズレ-アンダーガールズB&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">12.Everyday,カチューシャ(SDN Ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">13.口説きながら麻布十番　duet withみのもんた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">14.やりたがり屋さん-アンダーガールズG&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">15.カムジャタン慕情-アンダーガールズA&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">16.カシャーサで自白する-アンダーガールズB&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Album《Next Encore》')">17.1ガロンの汗&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 1st Single《GAGAGA》">SDN48 1st Single《GAGAGA》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Single《GAGAGA》')">01 GAGAGA.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Single《GAGAGA》')">02 孤独なランナー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Single《GAGAGA》')">03 エロスのトリガー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 1st Single《GAGAGA》')">03 佐渡へ渡る&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 2nd Single《愛、チュセヨ》">SDN48 2nd Single《愛、チュセヨ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 2nd Single《愛、チュセヨ》')">1 愛、チュセヨ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 2nd Single《愛、チュセヨ》')">2 天国のドアは3回目のベルで開く&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 2nd Single《愛、チュセヨ》')">3 淡路島のタマネギ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 2nd Single《愛、チュセヨ》')">4 愛よ 動かないで&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 3rd Single《MIN・MIN・MIN》">SDN48 3rd Single《MIN・MIN・MIN》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 3rd Single《MIN・MIN・MIN》')">01 MIN・MIN・MIN&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 3rd Single《MIN・MIN・MIN》')">02 おねだりシャンパン／アンダーガールズA&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 3rd Single《MIN・MIN・MIN》')">03 アバズレ／アンダーガールズB&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 3rd Single《MIN・MIN・MIN》')">04 Everyday、カチューシャ (SDN48 ver.)&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 4th Single《口説きながら麻布十番 duet with みの もんた》">SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》')">01 - 口説きながら麻布十番 duet with みの もんた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》')">02 - やりたがり屋さん&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》')">03 - カムジャタン慕情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 4th Single《口説きながら麻布十番 duet with みの もんた》')">07 - カシャーサで自白する&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSDN48 5th Single《負け惜しみコングラチュレーション》">SDN48 5th Single《負け惜しみコングラチュレーション》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 5th Single《負け惜しみコングラチュレーション》')">01 負け惜しみコングラチュレーション&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 5th Single《負け惜しみコングラチュレーション》')">02 クリクリ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 5th Single《負け惜しみコングラチュレーション》')">03 上からナツコ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SDN48 5th Single《負け惜しみコングラチュレーション》')">03 終わらないアンコール&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

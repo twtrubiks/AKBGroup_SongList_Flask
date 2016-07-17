@@ -1,0 +1,766 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/SKE48.jpg);
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+        
+        #ske1_Album:hover {
+            position: relative;
+        }
+        
+        #ske1_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/cover11.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_1_Single:hover {
+            position: relative;
+        }
+        
+        #ske_1_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folde447r.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_1st_IDLOVE_CRESCENDO:hover {
+            position: relative;
+        }
+        
+        #ske_1st_IDLOVE_CRESCENDO:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/1st_single_LOVE%20CRESCENDO.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_2_Single:hover {
+            position: relative;
+        }
+        
+        #ske_2_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/%E9%9D%92%E7%A9%BA%E7%89%87%E6%83%B3%E3%81%84.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_3_Single:hover {
+            position: relative;
+        }
+        
+        #ske_3_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folde_3rd.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_4_Single:hover {
+            position: relative;
+        }
+        
+        #ske_4_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Type%20B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_5_Single:hover {
+            position: relative;
+        }
+        
+        #ske_5_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Type%20A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_6_Single:hover {
+            position: relative;
+        }
+        
+        #ske_6_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Type%20AAAA.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_7_Single:hover {
+            position: relative;
+        }
+        
+        #ske_7_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_8_Single:hover {
+            position: relative;
+        }
+        
+        #ske_8_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Theater.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_9_Single:hover {
+            position: relative;
+        }
+        
+        #ske_9_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/64936661201205131418581753160172581_002.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_10_Single:hover {
+            position: relative;
+        }
+        
+        #ske_10_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/cover1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_11_Single:hover {
+            position: relative;
+        }
+        
+        #ske_11_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folder111.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_12_Single:hover {
+            position: relative;
+        }
+        
+        #ske_12_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folder145.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_13_Single:hover {
+            position: relative;
+        }
+        
+        #ske_13_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/1d0c5f3e.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_14_Single:hover {
+            position: relative;
+        }
+        
+        #ske_14_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/cover%20A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_15_Single:hover {
+            position: relative;
+        }
+        
+        #ske_15_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folder_15.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_16_Single:hover {
+            position: relative;
+        }
+        
+        #ske_16_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Single_16.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_17_Single:hover {
+            position: relative;
+        }
+        
+        #ske_17_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/Single_17.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_18_Single:hover {
+            position: relative;
+        }
+        
+        #ske_18_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/folder_18th.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #ske_19_Single:hover {
+            position: relative;
+        }
+        
+        #ske_19_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/single_19.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/SKE/SKE48.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 1st Album《この日のチャイムを忘れない》" id="ske1_Album">SKE48 1st Album《この日のチャイムを忘れない》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDLOVE CRESCENDO - 1st Single《コップの中の木漏れ日》" id="ske_1st_IDLOVE_CRESCENDO">LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 1st Single《強き者よ》" id="ske_1_Single">SKE48 1st Single《強き者よ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 2nd Single《青空片想い》" id="ske_2_Single">SKE48 2nd Single《青空片想い》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 3rd Single《ごめんね、SUMMER》" id="ske_3_Single">SKE48 3rd Single《ごめんね、SUMMER》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 4th Single《1!2!3!4! ヨロシク!》" id="ske_4_Single">SKE48 4th Single《1!2!3!4! ヨロシク!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 5th Single《バンザイVenus》" id="ske_5_Single">SKE48 5th Single《バンザイVenus》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 6th Single《パレオはエメラルド》" id="ske_6_Single">SKE48 6th Single《パレオはエメラルド》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 7th Single《オキドキ》" id="ske_7_Single">SKE48 7th Single《オキドキ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 8th Single《片想いFinally》" id="ske_8_Single">SKE48 8th Single《片想いFinally》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 9th Single《アイシテラブル!》" id="ske_9_Single">SKE48 9th Single《アイシテラブル!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 10th Single《キスだって左利き》" id="ske_10_Single">SKE48 10th Single《キスだって左利き》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 11th Single《チョコの奴隷》" id="ske_11_Single">SKE48 11th Single《チョコの奴隷》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 12th Single《美しい稲妻》" id="ske_12_Single">SKE48 12th Single《美しい稲妻》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 13th Single《賛成カワイイ!》" id="ske_13_Single">SKE48 13th Single《賛成カワイイ!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 14th Single《未来とは？》" id="ske_14_Single">SKE48 14th Single《未来とは？》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 15th Single《不器用太陽》" id="ske_15_Single">SKE48 15th Single《不器用太陽》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 16th Single《12月のカンガルー》" id="ske_16_Single">SKE48 16th Single《12月のカンガルー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 17th Single《コケティッシュ渋滞中》" id="ske_17_Single">SKE48 17th Single《コケティッシュ渋滞中》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 18th Single《前のめり》" id="ske_18_Single">SKE48 18th Single《前のめり》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDSKE48 19th Single《チキンLINE》" id="ske_19_Single">SKE48 19th Single《チキンLINE》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 1st Album《この日のチャイムを忘れない》">SKE48 1st Album《この日のチャイムを忘れない》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">01 強き者よ.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">02 青春片思い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">03 ごめんね、SUMMER&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">04 1!2!3!4!ヨロシク!&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">05 バンザイVenus&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">06 パレオはエメラルド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">07 オキドキ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">08 片想いFinally&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">09 フラフープでGO!GO!GO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">10 叱ってよ、ダーリン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">11 みつばちガール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">12 その先に君がいた&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">13 拗ねながら、雨&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">14 ヘビーローテーション&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">14T ポニーテールとシュシュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Album《この日のチャイムを忘れない》')">15 Beginner&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDLOVE CRESCENDO - 1st Single《コップの中の木漏れ日》">LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">01 コップの中の木漏れ日 (ラブ・クレッシェンド)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">02A あの先の未来まで (キャラメルキャッツ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">02B だって　雨じゃない？ (トランジットガールズ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">02C 愛してるとか、愛してたとか (フルマリオン)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">03 お楽しみは明日から (愛知トヨタ選抜)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('LOVE CRESCENDO - 1st Single《コップの中の木漏れ日》')">02.平民出馬宣言 （デッドストックダイヤモンド）&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 1st Single《強き者よ》">SKE48 1st Single《強き者よ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 1st Single《強き者よ》')">SKE48-強き者よ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4"  id="IDSKE48 2nd Single《青空片想い》">SKE48 2nd Single《青空片想い》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 2nd Single《青空片想い》')">01 青空片想い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 2nd Single《青空片想い》')">02 バンジー宣言&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 3rd Single《ごめんね、SUMMER》">SKE48 3rd Single《ごめんね、SUMMER》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 3rd Single《ごめんね、SUMMER》')">01 ごめんね、SUMMER&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 3rd Single《ごめんね、SUMMER》')">02 少女は真夏に何をする？&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 3rd Single《ごめんね、SUMMER》')">02 羽豆岬&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 3rd Single《ごめんね、SUMMER》')">03 ピノキオ軍(シアターガールズver.)&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 4th Single《1!2!3!4! ヨロシク!》">SKE48 4th Single《1!2!3!4! ヨロシク!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 4th Single《1!2!3!4! ヨロシク!》')">01 1! 2! 3! 4! ヨロシク!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 4th Single《1!2!3!4! ヨロシク!》')">02 TWO ROSES&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 4th Single《1!2!3!4! ヨロシク!》')">03 コスモスの記憶&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 4th Single《1!2!3!4! ヨロシク!》')">03 青春は恥ずかしい&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 4th Single《1!2!3!4! ヨロシク!》')">04 そばにいさせて&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 5th Single《バンザイVenus》">SKE48 5th Single《バンザイVenus》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 5th Single《バンザイVenus》')">1. バンザイVenus&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 5th Single《バンザイVenus》')">2. 愛の数(Team KII) &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 5th Single《バンザイVenus》')">3. 卒業式の忘れもの&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 5th Single《バンザイVenus》')">4. 誰かのせいにはしない(紅組 - AKAGUMI)&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 6th Single《パレオはエメラルド》">SKE48 6th Single《パレオはエメラルド》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 6th Single《パレオはエメラルド》')">01 パレオはエメラルド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 6th Single《パレオはエメラルド》')">02 積み木の時間&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 6th Single《パレオはエメラルド》')">03 ときめきの足跡&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 6th Single《パレオはエメラルド》')">04 パパは嫌い&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 6th Single《パレオはエメラルド》')">05 花火は終わらない&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 7th Single《オキドキ》">SKE48 7th Single《オキドキ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">1.オキドキ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">2.バズーカ砲発射！（白組）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">2.微笑みのポジティブシンキング（紅組）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">2.歌おうよ、僕たちの校歌（セレクション8）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">3.初恋の踏切&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 7th Single《オキドキ》')">4.SKE48 7th Single medley&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 8th Single《片想いFinally》">SKE48 8th Single《片想いFinally》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">01 片想いFinally&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">02A はにかみロリーポップ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">02B 声がかすれるくらい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">02C 寡黙な月&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">03 今日までのこと、これからのこと&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 8th Single《片想いFinally》')">T04 SKE48 8th Single medley&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 9th Single《アイシテラブル!》">SKE48 9th Single《アイシテラブル!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">1.アイシテラブル!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">2A.ハレーション&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">2B.あうんのキス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">2C. なんて銀河は明るいのだろう&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">3.目が痛いくらい晴れた空&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 9th Single《アイシテラブル!》')">04 SKE48 9th Single medley&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 10th Single《キスだって左利き》">SKE48 10th Single《キスだって左利き》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">01. キスだって左利き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">02A. 体育館で朝食を（白組）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">02B. 鳥は青い空の涯を知らない（紅組）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">02C. あっという間の少女（公演頑張った組）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">03. 神々の領域&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 10th Single《キスだって左利き》')">04 SKE48 10th Single medley&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 11th Single《チョコの奴隷》">SKE48 11th Single《チョコの奴隷》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">01. チョコの奴隷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">02A. Darkness&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">02B. バイクとサイドカー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">02C. 冬のかもめ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">03. それを青春と呼ぶ日&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 11th Single《チョコの奴隷》')">04C. 追いかけShadow&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4"  id="IDSKE48 12th Single《美しい稲妻》">SKE48 12th Single《美しい稲妻》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">01 - 美しい稲妻&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">02A - JYURI-JYURI BABY（Team S）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">02B - 2人だけのパレード（Team KII）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">02C - シャララなカレンダー（Team E）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">03A - スルー・ザ・ナイト（セレクション8）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">03B - 青春の水しぶき（ボートピア選抜）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">03C - バンドをやろうよ（マジカルバンド）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">2.夕立の前 - 研究生&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 12th Single《美しい稲妻》')">03.SKE48 12th Single Medley&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 13th Single《賛成カワイイ!》">SKE48 13th Single《賛成カワイイ!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">01 - 賛成カワイイ！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">02 - ここで一発（だ～す～＆つ～ま～）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">02B- いつのまにか、弱い者いじめ（セレクション8）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">02C - カナリアシンドローム（白組）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">02D - 石榴の実は憂鬱が何粒詰まっている？&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">03 - 道は なぜ続くのか？（愛知トヨタ選抜）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 13th Single《賛成カワイイ!》')">04 - ずっとずっと先の今日（セレクション18）&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 14th Single《未来とは？》">SKE48 14th Single《未来とは？》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">01. 未来とは？&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">2A. GALAXY of DREAMS (GALAXY of DREAMS)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">2B. 猫の尻尾がピンと立ってるうに…feat. Bose (スチャダラパー) (Team S)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">2C. S子と嘘発見器（Team KII）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">2D. 待ち合わせたい（Team E）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">03. Mayflower（九龍嬢）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 14th Single《未来とは？》')">03. 僕らの絆&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 15th Single《不器用太陽》">SKE48 15th Single《不器用太陽》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">01. 不器用太陽&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">02. サヨナラ　昨日の自分（Team KⅡ）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">02. バナナ革命（Team E）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">02. 放課後レース（Team S）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">02. 恋よりもDream（だ～す～､つ～ま～＆に～た～）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">03. Coming soon（ボートピア選抜）&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 15th Single《不器用太陽》')">04. 友達のままで（セレクション10）&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 16th Single《12月のカンガルー》">SKE48 16th Single《12月のカンガルー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">01. 12月のカンガルー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">02A 消せない炎 (Team S)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">02B DA DA マシンガン (Team KⅡ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">02C 青春カレーライス (Team E)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">02D 愛のルール (フォーカード)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">03 I love AICHI (愛知トヨタ選抜)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 16th Single《12月のカンガルー》')">&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 17th Single《コケティッシュ渋滞中》">SKE48 17th Single《コケティッシュ渋滞中》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">01. コケティッシュ渋滞中&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">02A DIRTY - Team S&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">02B 今夜はJoin us! - Team KII&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">02C 音を消したテレビ - Team E&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">02D 桜、覚えていてくれ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">02T 夜の教科書&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">03 僕は知っている - DOCUMENTARY of SKE48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 17th Single《コケティッシュ渋滞中》')">04T SKE48 17th Single Medley&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 18th Single《前のめり》">SKE48 18th Single《前のめり》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">01 前のめり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">02 2588日&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">02 長い夢のラビリンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">02 素敵な罪悪感&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">02 焦燥がこの僕をだめにする&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">03 制服を着た名探偵&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 18th Single《前のめり》')">03T SKE48 18th Single Medley&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDSKE48 19th Single《チキンLINE》">SKE48 19th Single《チキンLINE》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">01. チキンLINE&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">02A. 彼女がいる (Team S)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">02B. キスポジション (Team KII)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">02C. Is that your secret？ (Team E)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">02D. 旅の途中 (宮澤佐江卒業曲)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('SKE48 19th Single《チキンLINE》')">03. 望遠鏡のない天文台 (Passion For You 選抜)&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

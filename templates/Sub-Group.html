@@ -1,0 +1,1463 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/148149_400.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/f50dbad9f386ea.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/ssdda.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/original45.jpeg), url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/other/dsa.jpeg);
+            background-size: 25% auto, 22% auto, 18% auto, 25% auto, auto 40%;
+            background-position: left top, 95% top, 83% center, 10% bottom, right bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        #FK1st_Album:hover {
+            position: relative;
+        }
+        
+        #FK1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/1st_album.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK1st_Single:hover {
+            position: relative;
+        }
+        
+        #FK1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/AVCA-29856.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK2st_Single:hover {
+            position: relative;
+        }
+        
+        #FK2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/cover2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK3st_Single:hover {
+            position: relative;
+        }
+        
+        #FK3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/Type%20A2.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK4st_Single:hover {
+            position: relative;
+        }
+        
+        #FK4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/cover_A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK5st_Single:hover {
+            position: relative;
+        }
+        
+        #FK5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/Type-A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #FK6st_Single:hover {
+            position: relative;
+        }
+        
+        #FK6st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/French%20Kiss%EF%BC%88%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%82%AD%E3%82%B9%EF%BC%89/6th-B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_1st_Album:hover {
+            position: relative;
+        }
+        
+        #no3b_1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/no3b0101pc.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_2st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/foldASDASer.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_5st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/cover%20C.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_6st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_6st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/Type%20B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_7st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_7st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/regular.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_8st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_8st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/01%20%E3%83%9A%E3%83%87%E3%82%A3%E3%82%AD%E3%83%A5%E3%82%A2day.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #no3b_9st_Single:hover {
+            position: relative;
+        }
+        
+        #no3b_9st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/no3b%EF%BC%88%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9%EF%BC%89/%E5%88%9D%E5%9B%9E%E9%99%90%E5%AE%9A%E7%9B%A4A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #DIVA1st_Album:hover {
+            position: relative;
+        }
+        
+        #DIVA1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/DIVA/cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #DIVA1st_Single:hover {
+            position: relative;
+        }
+        
+        #DIVA1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/DIVA/Theater%20Edition%20Cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #DIVA2st_Single:hover {
+            position: relative;
+        }
+        
+        #DIVA2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/DIVA/Type%20B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #DIVA3st_Single:hover {
+            position: relative;
+        }
+        
+        #DIVA3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/DIVA/Type-C.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #DIVA4st_Single:hover {
+            position: relative;
+        }
+        
+        #DIVA4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/DIVA/cover%20a.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY1st_Album_a:hover {
+            position: relative;
+        }
+        
+        #NY1st_Album_a:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/cover1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY1st_Album_b:hover {
+            position: relative;
+        }
+        
+        #NY1st_Album_b:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/original.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY1st_Single:hover {
+            position: relative;
+        }
+        
+        #NY1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/Type%20AA.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY2st_Single:hover {
+            position: relative;
+        }
+        
+        #NY2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/Type%20A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY3st_Single:hover {
+            position: relative;
+        }
+        
+        #NY3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/COVER.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY4st_Single:hover {
+            position: relative;
+        }
+        
+        #NY4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/type-D.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NY5st_Single:hover {
+            position: relative;
+        }
+        
+        #NY5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/Not%20yet/folder123.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_1st_Album:hover {
+            position: relative;
+        }
+        
+        #corridor_1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_2st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/item_c.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_3st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/1%20%282%29.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_4st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/foldeDDr.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_5st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/1%20%281%29.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_6st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_6st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/Cover%20A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        .corridor7_1st_Album:hover {
+            position: relative;
+        }
+        
+        .corridor7_1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/CoverB.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor7_1st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor7_1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/covera.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor7_2st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor7_2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/Type%20B.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor7_3st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor7_3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/coverc.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor7_4st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor7_4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/%E9%80%9A%E5%B8%B8.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #corridor_and_1st_Single:hover {
+            position: relative;
+        }
+        
+        #corridor_and_1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/%E5%AD%90%E5%9C%98/%E6%B8%A1%E3%82%8A%E5%BB%8A%E4%B8%8B%E8%B5%B0%E3%82%8A%E9%9A%8A/folder.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(http://i.imgur.com/eYkSSua.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 1st Album《French Kiss》" id="FK1st_Album">フレンチ・キス 1st Album《French Kiss》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 1st Single《ずっと 前から》" id="FK1st_Single">フレンチ・キス 1st Single《ずっと 前から》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 2nd Single《if》" id="FK2st_Single">フレンチ・キス 2nd Single《if》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 3rd Single《カッコ悪い I love you!》" id="FK3st_Single">フレンチ・キス 3rd Single《カッコ悪い I love you!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 4th Single《最初のメール》" id="FK4st_Single">フレンチ・キス 4th Single《最初のメール》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 5th Single《ロマンス・プライバシー》" id="FK5st_Single">フレンチ・キス 5th Single《ロマンス・プライバシー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDフレンチ・キス 6th Single《思い出せない花》" id="FK6st_Single">フレンチ・キス 6th Single《思い出せない花》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 1st Album《ノースリーブス》" id="no3b_1st_Album">ノースリーブス 1st Album《ノースリーブス》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 2nd Single《タネ》" id="no3b_2st_Single">ノースリーブス 2nd Single《タネ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 5th Single《君しか》" id="no3b_5st_Single">ノースリーブス 5th Single《君しか》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 6th Single《Answer》" id="no3b_6st_Single">ノースリーブス 6th Single《Answer》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 7th Single《唇 触れず…》" id="no3b_7st_Single">ノースリーブス 7th Single《唇 触れず…》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 8th Single《ペディキュアday》" id="no3b_8st_Single">ノースリーブス 8th Single《ペディキュアday》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDノースリーブス 9th Single《キリギリス人》" id="no3b_9st_Single">ノースリーブス 9th Single《キリギリス人》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDDIVA 1st Album《DIVA》" id="DIVA1st_Album">DIVA 1st Album《DIVA》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDDIVA 1st Single《月の裏側》" id="DIVA1st_Single">DIVA 1st Single《月の裏側》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDDIVA 2nd Single《Cry》" id="DIVA2st_Single">DIVA 2nd Single《Cry》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDDIVA 3rd Single《Lost the way》" id="DIVA3st_Single">DIVA 3rd Single《Lost the way》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDDIVA 4th Single《Discovery》" id="DIVA4st_Single">DIVA 4th Single《Discovery》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 1st Album《Already》TypeA" id="NY1st_Album_a">Not yet 1st Album《Already》TypeA</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 1st Album《Already》TypeB" id="NY1st_Album_b">Not yet 1st Album《Already》TypeB</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 1st Single《週末Not yet》" id="NY1st_Single">Not yet 1st Single《週末Not yet》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 2nd Single《波乗りかき氷》" id="NY2st_Single">Not yet 2nd Single《波乗りかき氷》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 3rd Single《ペラペラペラオ》" id="NY3st_Single">Not yet 3rd Single《ペラペラペラオ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 4th Single《西瓜BABY》" id="NY4st_Single">Not yet 4th Single《西瓜BABY》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNot yet 5th Single《ヒリヒリの花》" id="NY5st_Single">Not yet 5th Single《ヒリヒリの花》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 1st Album《廊下は走るな!》" id="corridor_1st_Album">渡り廊下走り隊 1st Album《廊下は走るな!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 2nd Single《やる気花火》" id="corridor_2st_Single">渡り廊下走り隊 2nd Single《やる気花火》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 3rd Single《完璧ぐ〜のね》" id="corridor_3st_Single">渡り廊下走り隊 3rd Single《完璧ぐ〜のね》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 4th Single《アッカンベー橋》" id="corridor_4st_Single">渡り廊下走り隊 4th Single《アッカンベー橋》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 5th Single《青春のフラッグ》" id="corridor_5st_Single">渡り廊下走り隊 5th Single《青春のフラッグ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊 6th Single《ギュッ》" id="corridor_6st_Single">渡り廊下走り隊 6th Single《ギュッ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1" class="corridor7_1st_Album">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2" class="corridor7_1st_Album">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3" class="corridor7_1st_Album">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 1st Single《バレンタイン・キッス》" id="corridor7_1st_Single">渡り廊下走り隊7 1st Single《バレンタイン・キッス》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 2nd Single《へたっぴウィンク》" id="corridor7_2st_Single">渡り廊下走り隊7 2nd Single《へたっぴウィンク》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 3rd Single《希望山脈》" id="corridor7_3st_Single">渡り廊下走り隊7 3rd Single《希望山脈》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》" id="corridor7_4st_Single">渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》" id="corridor_and_1st_Single">渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》</a></td>
+            </tr>
+        </table>
+    </div>
+	<br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 1st Album《French Kiss》">フレンチ・キス 1st Album《French Kiss》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">01 ずっと 前から&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">01 世界の涙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">02 If&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">03 最初のメール&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">04 沈黙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">05 火山灰&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">06 Rainy day&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">07 君なら大丈夫&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">07 思い出せない花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">08 ドラゴンフルーツの食べ頃&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">09 カッコ悪い I love you! &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">09キャンドルの芯&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">10 2人だけの記憶&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">10 ロマンス・プライバシー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">10 心の鍵&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">11 あまのじゃく&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">11 ある秋の日のこと&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Album《French Kiss》')">12 サヨナラをあと何回…&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 1st Single《ずっと 前から》">フレンチ・キス 1st Single《ずっと 前から》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Single《ずっと 前から》')">01 ずっと 前から&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Single《ずっと 前から》')">02 ある秋の日のこと&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Single《ずっと 前から》')">02 てもでもの涙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 1st Single《ずっと 前から》')">02 夜風の仕業&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 2nd Single《if》">フレンチ・キス 2nd Single《if》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 2nd Single《if》')">01 If&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 2nd Single《if》')">02 口移しのチョコレート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 2nd Single《if》')">03 沈黙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 2nd Single《if》')">03 前を向いてる君&nbsp;</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 3rd Single《カッコ悪い I love you!》">フレンチ・キス 3rd Single《カッコ悪い I love you!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 3rd Single《カッコ悪い I love you!》')">01 カッコ悪い I love you!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 3rd Single《カッコ悪い I love you!》')">02 ぽっかり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 3rd Single《カッコ悪い I love you!》')">03 君なら大丈夫&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 3rd Single《カッコ悪い I love you!》')">04 世界の涙&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 4th Single《最初のメール》">フレンチ・キス 4th Single《最初のメール》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 4th Single《最初のメール》')">01 最初のメール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 4th Single《最初のメール》')">2A.キャンドルの芯(柏木・倉持曲).&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 4th Single《最初のメール》')">2B.Last train(柏木・高城曲)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 4th Single《最初のメール》')">2C.ドラゴンフルーツの食べ頃&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 4th Single《最初のメール》')">02. 真夜中の歯磨き&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 5th Single《ロマンス・プライバシー》">フレンチ・キス 5th Single《ロマンス・プライバシー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 5th Single《ロマンス・プライバシー》')">01 ロマンス・プライバシー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 5th Single《ロマンス・プライバシー》')">02 Rainy day&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 5th Single《ロマンス・プライバシー》')">03 バイオリズム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 5th Single《ロマンス・プライバシー》')">03 瓶の蓋&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 5th Single《ロマンス・プライバシー》')">02.火山灰-柏木由紀SOLO曲&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDフレンチ・キス 6th Single《思い出せない花》">フレンチ・キス 6th Single《思い出せない花》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">01 思い出せない花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">02 あまのじゃく&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">03A 6月29日&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">03B 2人だけの記憶 (高城亜樹)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">03C 広い世界の中で出逢えたこと (柏木由紀)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('フレンチ・キス 6th Single《思い出せない花》')">03D 心の鍵 (倉持明日香)&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 1st Album《ノースリーブス》">ノースリーブス 1st Album《ノースリーブス》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">01 Relax!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">02 キスの流星&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">03 3seconds (Remix)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">04 ハート型ウイルス no3b ver&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">05 Bye Bye Bye&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">06 Cloudy sky [Performance：小嶋陽菜]&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">06 私は私 [Performance：峯岸みなみ]&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">06 奇跡は夜生まれる [Performance：高橋みなみ]&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">07 純愛のクレッシェンド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">08 クリスマスプレゼント (Remix)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">09 Lie&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">10 タネ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">11 Next heaven [Performance：EYES]&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">11 尺が欲しい [Performance：恋愛運上昇団]&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 1st Album《ノースリーブス》')">11 嘘でしょ？～七里ガ浜の七不思議～ [Performance：ガール]&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 2nd Single《タネ》">ノースリーブス 2nd Single《タネ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 2nd Single《タネ》')">01 タネ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 2nd Single《タネ》')">02 Girls' talk&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 5th Single《君しか》">ノースリーブス 5th Single《君しか》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 5th Single《君しか》')">01. 君しか&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 5th Single《君しか》')">02. 青春の木洩れ陽&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 6th Single《Answer》">ノースリーブス 6th Single《Answer》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 6th Single《Answer》')">01 Answer&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 6th Single《Answer》')">02 モノズキ1号&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 6th Single《Answer》')">03 ☆の向こう側 [no3b ver.]&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 6th Single《Answer》')">04 愛しさのアクセル(高橋みなみ)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 6th Single《Answer》')">05 逆転王子様 [no3b ver.]&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 7th Single《唇 触れず…》">ノースリーブス 7th Single《唇 触れず…》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 7th Single《唇 触れず…》')">01 唇 触れず…&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 7th Single《唇 触れず…》')">02 錯覚&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 7th Single《唇 触れず…》')">03 誰か教えて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 7th Single《唇 触れず…》')">04 明後日、ジャマイカ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 7th Single《唇 触れず…》')">05 サヨナラに気づいて…&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 8th Single《ペディキュアday》">ノースリーブス 8th Single《ペディキュアday》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 8th Single《ペディキュアday》')">01 ペディキュアday&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 8th Single《ペディキュアday》')">02 ジェシカはドアをノックしない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 8th Single《ペディキュアday》')">03 Still&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 8th Single《ペディキュアday》')">03 半分こ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 8th Single《ペディキュアday》')">05 微睡み&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDノースリーブス 9th Single《キリギリス人》">ノースリーブス 9th Single《キリギリス人》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 9th Single《キリギリス人》')">01 キリギリス人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 9th Single《キリギリス人》')">02 いーんじゃね？&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 9th Single《キリギリス人》')">03 MY SHINING STARS&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 9th Single《キリギリス人》')">03 ふと思うコト&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('ノースリーブス 9th Single《キリギリス人》')">03 君に恋をした&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDDIVA 1st Album《DIVA》">DIVA 1st Album《DIVA》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">01 - 月の裏側&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">02 - Cry&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">03 - Lost the way&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">04 - DISCOVERY&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">05 - DIVA!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">06 - 大スキ+大キライ=大好き!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">07 - WOW WAR TONIGHT~時には起こせよムーヴメント~&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">08 - 一人想い&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">09 - You should know it...&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">10 - 妄想シンデレラ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Album《DIVA》')">11 - For tenderness&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+
+            <table>
+                <tr>
+                    <td colspan="4" id="IDDIVA 1st Single《月の裏側》">DIVA 1st Single《月の裏側》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Single《月の裏側》')">01 月の裏側&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Single《月の裏側》')">02 Fade out&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Single《月の裏側》')">03 インフォメーション&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Single《月の裏側》')">04 Blue rose -DIVA ver&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 1st Single《月の裏側》')">05 月の裏側 -Royal Mirrorball Mix&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDDIVA 2nd Single《Cry》">DIVA 2nd Single《Cry》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 2nd Single《Cry》')">01 Cry&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 2nd Single《Cry》')">02 No way out&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 2nd Single《Cry》')">03 地下水道&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 2nd Single《Cry》')">04 MARIA -DIVA ver&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 2nd Single《Cry》')">05 MARIA -Original Track Cover&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDDIVA 3rd Single《Lost the way》">DIVA 3rd Single《Lost the way》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 3rd Single《Lost the way》')">01 Lost the way&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 3rd Single《Lost the way》')">02 Stargazer - 2012 Here I am cuz of U - Yuka Masuda from DIVA&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 3rd Single《Lost the way》')">03 君はペガサス -DIVA ver&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 3rd Single《Lost the way》')">03 悲しみのMirage&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 3rd Single《Lost the way》')">03 君はペガサス - Original Track Cover&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDDIVA 4th Single《Discovery》">DIVA 4th Single《Discovery》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 4th Single《Discovery》')">01. Discovery&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 4th Single《Discovery》')">02a. Believe in Myself&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 4th Single《Discovery》')">02b. Surrender&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('DIVA 4th Single《Discovery》')">02c. WOW WAR TONIGHT～時には起こせよムーヴメント～&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 1st Album《Already》TypeA">Not yet 1st Album《Already》TypeA</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">01 週末Not yet&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">02 波乗りかき氷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">03 ペラペラペラオ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">04 西瓜BABY&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">05 ヒリヒリの花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">06 ひらひら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">07 ハグ友&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">08 海鳴りよ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">09 次のピアス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">10 味方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">11 元カレが結婚するとき&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">12 希望の花&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">13 爆発プロフェッサー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">14 guilty love&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">15 May&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">16 世界の風を僕らは受けて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeA')">17 Already&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 1st Album《Already》TypeB">Not yet 1st Album《Already》TypeB</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">01 週末Not yet&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">02 波乗りかき氷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">03 ペラペラペラオ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">04 西瓜BABY&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">05 ヒリヒリの花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">06 ひらひら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">07 ハグ友&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">08 海鳴りよ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">09 次のピアス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">10 不毛な夜&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">11 笑うがいい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">12 ギリシャの貨物船&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">13 もしも、手を繋いでいたら.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">14 見えない空はいつでも青い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">15 僕たちのオフショア&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">16 世界の風を僕らは受けて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Album《Already》TypeB')">17 あれからアールグレイを飲んでいない&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 1st Single《週末Not yet》">Not yet 1st Single《週末Not yet》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Single《週末Not yet》')">01 週末Not yet&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Single《週末Not yet》')">02 ひらひら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Single《週末Not yet》')">03 素直になりたい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Single《週末Not yet》')">04 笑うがいい&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 1st Single《週末Not yet》')">05 泣きながら微笑んで (Not yet ver.)&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 2nd Single《波乗りかき氷》">Not yet 2nd Single《波乗りかき氷》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 2nd Single《波乗りかき氷》')">01 波乗りかき氷&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 2nd Single《波乗りかき氷》')">02 フェルメールの手紙&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 2nd Single《波乗りかき氷》')">03 ハグ友&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 2nd Single《波乗りかき氷》')">04 ギリシャの貨物船&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 2nd Single《波乗りかき氷》')">05 僕たちのオフショア&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 3rd Single《ペラペラペラオ》">Not yet 3rd Single《ペラペラペラオ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 3rd Single《ペラペラペラオ》')">01 ペラペラペラオ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 3rd Single《ペラペラペラオ》')">02 海鳴りよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 3rd Single《ペラペラペラオ》')">03 元カレが結婚する時&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 3rd Single《ペラペラペラオ》')">03 味方&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 3rd Single《ペラペラペラオ》')">03 風車が見える街&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 4th Single《西瓜BABY》">Not yet 4th Single《西瓜BABY》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">01 西瓜BABY&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">02 希望の花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">03 guilty love&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">03 May&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">03 アイサレルトイウコト (Not yet ver.)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 4th Single《西瓜BABY》')">03 不毛な夜 &nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNot yet 5th Single《ヒリヒリの花》">Not yet 5th Single《ヒリヒリの花》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">01 ヒリヒリの花&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">02 次のピアス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">03 ささやかな僕の抵抗&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">03 もしも、手を繋いでいたら&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">03 見えない空はいつでも青い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('Not yet 5th Single《ヒリヒリの花》')">03 爆発プロフェッサー &nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 1st Album《廊下は走るな!》">渡り廊下走り隊 1st Album《廊下は走るな!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">01 猫だまし&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">02 初恋ダッシュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">03 完璧ぐ~のね&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">04 ドジ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">05 青い未来&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">06 アッカンベー橋&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">07 骨折ロマンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">08 麻友のために&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">09 ギュッ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">10 やる気花火&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">11 柊の通学路&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 1st Album《廊下は走るな!》')">12 青春のフラッグ&nbsp;</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 2nd Single《やる気花火》">渡り廊下走り隊 2nd Single《やる気花火》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 2nd Single《やる気花火》')">01 やる気花火&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 2nd Single《やる気花火》')">02 恋愛アスリート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 2nd Single《やる気花火》')">03 白いチューリップ&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 3rd Single《完璧ぐ〜のね》">渡り廊下走り隊 3rd Single《完璧ぐ〜のね》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 3rd Single《完璧ぐ〜のね》')">01 完璧ぐ～のね&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 3rd Single《完璧ぐ〜のね》')">02 冒険エトセトラ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 3rd Single《完璧ぐ〜のね》')">03 風のバイオリン&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 4th Single《アッカンベー橋》">渡り廊下走り隊 4th Single《アッカンベー橋》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 4th Single《アッカンベー橋》')">01 アッカンベー橋&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 4th Single《アッカンベー橋》')">02 若気のイタリアン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 4th Single《アッカンベー橋》')">03 やさしくさせて&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 5th Single《青春のフラッグ》">渡り廊下走り隊 5th Single《青春のフラッグ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 5th Single《青春のフラッグ》')">01 青春のフラッグ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 5th Single《青春のフラッグ》')">02 走り隊 GO! GO! GO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 5th Single《青春のフラッグ》')">03 軟体恋愛クラゲっ娘&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊 6th Single《ギュッ》">渡り廊下走り隊 6th Single《ギュッ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 6th Single《ギュッ》')">01 ギュッ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 6th Single《ギュッ》')">02 手のひら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊 6th Single《ギュッ》')">03 ゴメンナサイ&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">01 初恋ダッシュ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">02 青い未来&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">03 恋のチューイング&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">04 やる気花火&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">05 恋愛アスリート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">06 白いチューリップ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">07 完璧ぐ~のね&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">08 冒険エトセトラ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">09 風のバイオリン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">10 アッカンベー橋&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">11 若気のイタリアン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">12 やさしくさせて&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">13 青春のフラッグ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">14 走り隊 GO!GO!GO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 1')">15 軟体恋愛クラゲっ娘&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">01 ギュッ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">02 手のひら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">03 ゴメンナサイ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">04 猫だまし&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">05 ドジ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">06 骨折ロマンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">07 麻友のために&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">08 柊の通学路&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">09 バレンタイン・キッス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">10 ソミソミラシラ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">11 初恋よ こんにちは&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">12 パジャマドライブ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 2')">13 夕陽のいじわる&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3">渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">01 へたっぴウィンク&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">02 マンマ、グラッチェ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">03 ビキニは似合わない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">04 思い出は遠いほど...&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">05 地下鉄のTeddy boy&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">06 服を着た王様&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">07 未来の恋人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">08 希望山脈&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">09 犬語を話せる男の子&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">10 猿のシンバル&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">11 秘どっきりで行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">12 少年よ 嘘をつけ！&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">13 恋は心配性&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">14 君は考える&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">15 姉妹どんぶり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">16 恋愛ヘビー級チャンピオン&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">17 なんて素敵なあひるのボート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Album《渡り廊下をゆっくり歩きたい》DISC 3')">18 へそが曲がる&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 1st Single《バレンタイン・キッス》">渡り廊下走り隊7 1st Single《バレンタイン・キッス》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Single《バレンタイン・キッス》')">01 バレンタイン・キッス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Single《バレンタイン・キッス》')">02 ソミソミラシラ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Single《バレンタイン・キッス》')">03 初恋よ こんにちは&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Single《バレンタイン・キッス》')">04 パジャマドライブ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 1st Single《バレンタイン・キッス》')">05 夕陽のいじわる&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 2nd Single《へたっぴウィンク》">渡り廊下走り隊7 2nd Single《へたっぴウィンク》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">01 へたっぴウィンク&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">02 マンマ、グラッチェ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">03 ビキニは似合わない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">04 地下鉄のTeddy boy&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">05 服を着た王様&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 2nd Single《へたっぴウィンク》')">06 未来の恋人&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 3rd Single《希望山脈》">渡り廊下走り隊7 3rd Single《希望山脈》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">01 希望山脈&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">02 恋は心配性&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">03 どっきりで行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">03 思い出は遠いほど....&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">03 どっきりで行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 3rd Single《希望山脈》')">03 猿のシンバル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》">渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">01 少年よ 嘘をつけ！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">02 へそが曲がる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">03 君は考える&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">03 姉妹どんぶり&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">03 恋愛ヘビー級チャンピオン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊7 4th Single《少年よ 嘘をつけ！》')">03 なんて素敵なあひるのボート&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》">渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》')">01 渚のシンドバッド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('渡り廊下走り隊／簪 1st Single《Bad Friends～阿久悠トリビュート～》')">02 河原の石川五右衛門&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

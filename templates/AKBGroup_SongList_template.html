@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% include "AKBGroup_SongList_cssFiles.html" %}
+    {% block style %} {% endblock style %}
+    {% include "AKBGroup_SongList_jsFiles.html" %}
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <br>
+    <div id="gotop" title="回到頂端"></div>
+    <div align="center">
+        <input type="button" class="button" value="Home" onclick="back_home()">
+        <input type="button" class="button" id="switch" value="全部展開">
+    </div>
+    <br>
+    {% block content %}{% endblock content %}
+    <br><br><br><br><br><br><br><br>
+</body>
+
+</html>

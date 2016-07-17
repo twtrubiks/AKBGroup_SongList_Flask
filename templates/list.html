@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="refresh" content="180">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style_list.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/sweetalert.css')}}">-->
+    <script src="{{ url_for('static', filename='javascripts/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='javascripts/jquery-ui.min.js')}}"></script>
+    <!--<script src="{{ url_for('static', filename='javascripts/sweetalert.min.js')}}"></script>-->
+    <script src="{{ url_for('static', filename='javascripts/config.js')}}"></script>
+
+    <title>list</title>
+    <style type="text/css">
+        body {
+                background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/home/all.jpg);
+                background-attachment: fixed;
+            }
+
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(http://i.imgur.com/eYkSSua.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div id="gotop" title="回到頂端"></div>
+    <div align="center">
+        <input type="button" class="button" value="Home" onclick="back_home()">
+    </div>
+    <br>
+    <div class="CSSTableGenerator">
+    <table>
+        <tr>
+            <td>Number</td>
+            <td>Order Time</td>
+            <td>ID</td>
+            <td>Song</td>
+            <td>Source</td>
+            <td>condition</td>
+            <td>P.S</td>
+        </tr>
+            {% for item in items %}
+        <tr>
+            <td style="text-align:center">{{item.ID}}</td>
+            <td style="text-align:center">{{item.Order_Time}}</td>
+            <td>{{item.User}}</td>
+            <td>{{item.Song}}</td>
+            <td>{{item.Source}}</td>
+            {% if item.Condition == "Play" %}
+                <td style="text-align:center;color:#ff3dd6">{{item.Condition}}</td>
+            {% else %}
+                <td style="text-align:center;color:blue">{{item.Condition}}</td>
+            {% endif %}
+            <td>{{item.PS}}</td>
+        </tr>
+            {% endfor %}
+    </table>
+</div>
+</body>
+
+</html>

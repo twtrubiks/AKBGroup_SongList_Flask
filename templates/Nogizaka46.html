@@ -1,0 +1,692 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/46.jpg);
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+        
+        #p46_1st_Album_D1:hover {
+            position: relative;
+        }
+        
+        #p46_1st_Album_D1:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/SRCL-8662%7E4.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_1st_Album_D2:hover {
+            position: relative;
+        }
+        
+        #p46_1st_Album_D2:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/SRCL-8665%7E6.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+
+        #p46_2nd_Album:hover {
+            position: relative;
+        }
+
+        #p46_2nd_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/cover_2nd_Album.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+
+        #p46_1st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/SRCL-7900.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_2st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/Type-A.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_3st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/cover_b.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_4st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/46a.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_5st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/4646.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_6st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_6st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/tpSXgTm.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_7st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_7st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/tb.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_8st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_8st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/bb.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_9st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_9st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/9th%20-%20%E5%A4%8F%E3%81%AEFree%EF%BC%86Easy%20-%20%E9%80%9A%E5%B8%B8.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_10st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_10st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/folder10.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_11st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_11st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/folder_11th.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_12st_Single:hover {
+            position: relative;
+        }
+        
+        #p46_12st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/cover12.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_13th_Single:hover {
+            position: relative;
+        }
+        
+        #p46_13th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/13th_cover.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #p46_14th_Single:hover {
+            position: relative;
+        }
+        
+        #p46_14th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/folder_14.jpg);
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/46/46.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 1st Album《透明な色》/Disc 1" id="p46_1st_Album_D1">乃木坂46 1st Album《透明な色》/Disc 1</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 1st Album《透明な色》/Disc 2" id="p46_1st_Album_D2">乃木坂46 1st Album《透明な色》/Disc 2</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 2nd Album《それぞれの椅子》" id="p46_2nd_Album">乃木坂46 2nd Album《それぞれの椅子》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 1st Single《ぐるぐるカーテン》" id="p46_1st_Single">乃木坂46 1st Single《ぐるぐるカーテン》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 2nd Single《おいでシャンプー》" id="p46_2st_Single">乃木坂46 2nd Single《おいでシャンプー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 3rd Single《走れ!Bicycle》" id="p46_3st_Single">乃木坂46 3rd Single《走れ!Bicycle》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 4th Single《制服のマネキン》" id="p46_4st_Single">乃木坂46 4th Single《制服のマネキン》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 5th Single《君の名は希望》" id="p46_5st_Single">乃木坂46 5th Single《君の名は希望》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 6th Single《ガールズルール》" id="p46_6st_Single">乃木坂46 6th Single《ガールズルール》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 7th Single《バレッタ》" id="p46_7st_Single">乃木坂46 7th Single《バレッタ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 8th Single《気づいたら片想い》" id="p46_8st_Single">乃木坂46 8th Single《気づいたら片想い》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 9th Single《夏のFree&Easy》" id="p46_9st_Single">乃木坂46 9th Single《夏のFree＆Easy》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 10th Single《何度目の青空か？》" id="p46_10st_Single">乃木坂46 10th Single《何度目の青空か？》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 11th Single《命は美しい》" id="p46_11st_Single">乃木坂46 11th Single《命は美しい》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 12th Single《太陽ノック》" id="p46_12st_Single">乃木坂46 12th Single《太陽ノック》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 13th Single《今、話したい誰かがいる》" id="p46_13th_Single">乃木坂46 13th Single《今、話したい誰かがいる》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#ID乃木坂46 14th Single《ハルジオンが咲く頃》" id="p46_14th_Single">乃木坂46 14th Single《ハルジオンが咲く頃》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 1st Album《透明な色》/Disc 1">乃木坂46 1st Album《透明な色》/Disc 1</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">01.OVERTURE&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">02.ぐるぐるカーテン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">03.おいでシャンプー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">04.走れ! Bicycle&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">05.制服のマネキン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">06.君の名は希望&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">07.ガールズルール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">08.バレッタ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">09.気づいたら片想い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">10.夏のFree＆Easy&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">11.何度目の青空か&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">12.誰かは味方&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">13.革命の馬&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">14.僕がいる場所&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 1')">15.あなたのために弾きたい&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 1st Album《透明な色》/Disc 2">乃木坂46 1st Album《透明な色》/Disc 2</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">01.他の星から&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">02.私のために 誰かのために&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">03.せっかちなかたつむり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">04.涙がまだ悲しみだった頃&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">05.無口なライオン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">06.世界で一番 孤独なLover&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">07.あの日 僕は咄嗟に嘘をついた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">08.13日の金曜日&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">09.失いたくないから&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">10.ダンケシェーン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">11.傾斜する&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">12.なぞの落書き&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">13.自由の彼方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Album《透明な色》/Disc 2')">14.ひとりよがり&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 2nd Album《それぞれの椅子》">乃木坂46 2nd Album《それぞれの椅子》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">01. 命は美しい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">02. 太陽ノック&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">03. 今、話したい誰かがいる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">04. ハルジオンが咲く頃&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">05. きっかけ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">06. 太陽に口説かれて&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">07. 欲望のリインカーネーション&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">08. 悲しみの忘れ方&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">09. Threefold choice&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">09. 失恋したら、顔を洗え!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">09. 空気感&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">09. 環状六号線&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">10. かき氷の片想い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">10. 口約束&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">10. 光合成希望&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">10. 低体温のキス&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">11. ロマンティックいか焼き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">11. 大人への近道&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">11. 無表情&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">11. 遥かなるブータン&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">12. あらかじめ語られるロマンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">12. ハウス！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">12. ポピパッパパー&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">12. 君は僕と会わない方がよかったのかな&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">13. そんなバカな…&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">13. 別れ際、もっと好きになる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">13. 制服を脱いでサヨナラを…&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">13. 隙間&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">14. シャキイズム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">14. 急斜面&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">14. 嫉妬の権利&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">14. 憂鬱と風船ガム&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">15. ロマンスのスタート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">15. 不等号&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">15. 立ち直り中&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">15. 羽根の記憶&nbsp;</a></td>
+                </tr>
+				<tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Album《それぞれの椅子》')">16. 乃木坂の詩&nbsp;</a></td>
+                    <td></td>
+					<td></td>
+					<td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 1st Single《ぐるぐるカーテン》">乃木坂46 1st Single《ぐるぐるカーテン》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">01.ぐるぐるカーテン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">02.左胸の勇気&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">03.乃木坂の詩&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">03.失いたくないから&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">04.白い雲にのって&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 1st Single《ぐるぐるカーテン》')">05.会いたかったかもしれない&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 2nd Single《おいでシャンプー》">乃木坂46 2nd Single《おいでシャンプー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">01 おいでシャンプー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">02 心の薬&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">03 水玉模様&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">03 狼に口笛を&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">04.偶然を言い訳にして&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 2nd Single《おいでシャンプー》')">3N ハウス！&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 3rd Single《走れ!Bicycle》">乃木坂46 3rd Single《走れ!Bicycle》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">01 走れ!Bicycle&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">02 せっかちなかたつむり&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">03A. 涙がまだ悲しみだった頃.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">03B. 人はなぜ走るのか&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">03C. 音が出ないギター&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 3rd Single《走れ!Bicycle》')">06.海流の島よ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 4th Single《制服のマネキン》">乃木坂46 4th Single《制服のマネキン》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">01 制服のマネキン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">02 指望遠鏡&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">3A. やさしさなら間に合ってる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">3B. ここじゃないどこか&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">3C. 春のメロディー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 4th Single《制服のマネキン》')">07. 渋谷ブルース&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 5th Single《君の名は希望》">乃木坂46 5th Single《君の名は希望》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">01. 君の名は希望&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">02. シャキイズム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">03A. ロマンティックいか焼き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">03B. 13日の金曜日&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">03C. でこぴん&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 5th Single《君の名は希望》')">03N. サイコキネシスの可能性&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 6th Single《ガールズルール》">乃木坂46 6th Single《ガールズルール》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">01 - ガールズルール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">02 - 世界で一番 孤独なLover&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">03 人間という楽器&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">03A - コウモリよ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">03B - 扇風機&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 6th Single《ガールズルール》')">03C - 他の星から&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 7th Single《バレッタ》">乃木坂46 7th Single《バレッタ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 7th Single《バレッタ》')">01 バレッタ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 7th Single《バレッタ》')">02 月の大きさ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 7th Single《バレッタ》')">03 私のために　誰かのために&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 7th Single《バレッタ》')">03 そんなバカな・・・.&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 7th Single《バレッタ》')">03 初恋の人を今でもnbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 8th Single《気づいたら片想い》">乃木坂46 8th Single《気づいたら片想い》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">01 気づいたら片想い&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">02 ロマンスのスタート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">03A 吐息のメソッド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">03B 孤独兄弟&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">03C 生まれたままで&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 8th Single《気づいたら片想い》')">03T ダンケシェーン&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 9th Single《夏のFree&Easy》">乃木坂46 9th Single《夏のFree＆Easy》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">01 夏のFree＆Easy&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">02 何もできずにそばにいる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">03A その先の出口&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">03B 無口なライオン&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">03C ここにいる理由&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 9th Single《夏のFree＆Easy》')">03T 僕が行かなきゃ誰が行くんだ？&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 10th Single《何度目の青空か？》">乃木坂46 10th Single《何度目の青空か？》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">01 何度目の青空か？&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">02 遠回りの愛情&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">03 転がった鐘を鳴らせ！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">03 私、起きる&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">03 あの日 僕は咄嗟に嘘をついた&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 10th Single《何度目の青空か？》')">03 Tender days&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 11th Single《命は美しい》">乃木坂46 11th Single《命は美しい》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">01 命は美しい&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">02 あらかじめ语られるロマンス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">03 ごめんね　ずっと・・・&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">04 立ち直り中&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">05 - ボーダー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 11th Single《命は美しい》')">06 - 君は僕と会わない方がよかったのかな&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 12th Single《太陽ノック》"> 乃木坂46 12th Single《太陽ノック》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">01 太陽ノック&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">02 もう少しの夢&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">3A 魚たちのLOVE SONG&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">3B 無表情&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">3C 別れ際、もっと好きになる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">3R 制服を脱いでサヨナラを…&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 12th Single《太陽ノック》')">3S 羽根の記憶&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 13th Single《今、話したい誰かがいる》">乃木坂46 13th Single《今、話したい誰かがいる》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">01 今、話したい誰かがいる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">02 嫉妬の権利&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">03A ポピパッパパー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">03B 大人への近道&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">03C 悲しみの忘れ方&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 13th Single《今、話したい誰かがいる》')">03R 隙間&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID乃木坂46 14th Single《ハルジオンが咲く頃》">乃木坂46 14th Single《ハルジオンが咲く頃》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">01 ハルジオンが咲く頃&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">02 遥かなるブータン&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">03 強がる蕾&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">04 急斜面&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">05 釣り堀&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">06 不等号&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('乃木坂46 14th Single《ハルジオンが咲く頃》')">07 憂鬱と風船ガム&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

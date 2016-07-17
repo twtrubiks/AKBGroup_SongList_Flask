@@ -1,0 +1,73 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/Keyakizaka46/Keyakizaka46.jpg);
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+        
+        #Keyaki46_1st_Single:hover {
+            position: relative;
+        }
+        
+        #Keyaki46_1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/Keyakizaka46/1th_cover.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/Keyakizaka46/Keyakizaka46.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#ID欅坂46 1st Single《サイレントマジョリティー》" id="Keyaki46_1st_Single">欅坂46 1st Single《サイレントマジョリティー》</a></td>
+            </tr>
+        </table>
+    </div>
+	<br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="ID欅坂46 1st Single《サイレントマジョリティー》">欅坂46 1st Single《サイレントマジョリティー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">1 サイレントマジョリティー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">2 手を繋いで帰ろうか&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">3A 山手線&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">3B 渋谷川&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">3C 乗り遅れたバス &nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('欅坂46 1st Single《サイレントマジョリティー》')">3D キミガイナイ&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

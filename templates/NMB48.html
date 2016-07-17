@@ -1,0 +1,652 @@
+{% extends "AKBGroup_SongList_template.html" %}
+
+{% block style %}
+    <style type="text/css">
+        body {
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/nmb.jpg);
+            background-attachment: fixed;
+            background-repeat: repeat;
+        }
+        
+        #NMB1st_Album:hover {
+            position: relative;
+        }
+        
+        #NMB1st_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/l_typeB.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB2nd_Album:hover {
+            position: relative;
+        }
+        
+        #NMB2nd_Album:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0work/akb_web%E5%9C%96/NMB/Album_2nd.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB1st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB1st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/A.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB2st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB2st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/foldeDDDDDAr.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB3st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB3st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/cover1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB4st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB4st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/TypeB.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB5st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB5st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/foldeSAASASr.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB6st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB6st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/TRRT.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB7st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB7st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/nmb48_1.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB8st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB8st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/GRS.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB9st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB9st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/cover%20%281%29.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB10st_Single:hover {
+            position: relative;
+        }
+        
+        #NMB10st_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/b.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB11th_Single:hover {
+            position: relative;
+        }
+        
+        #NMB11th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/CoverA_11th.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB12th_Single:hover {
+            position: relative;
+        }
+        
+        #NMB12th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/cover12.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #NMB13th_Single:hover {
+            position: relative;
+        }
+        
+        #NMB13th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/Cover_13th.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+
+        #NMB14th_Single:hover {
+            position: relative;
+        }
+
+        #NMB14th_Single:hover:after {
+            content: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/cover14.jpg);
+            /* no need for qoutes */
+            display: block;
+            position: absolute;
+            left: 250px;
+            top: -100px;
+        }
+        
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            padding: 20px 15px;
+            font-size: 20px;
+            /*background: #777;*/
+            background-image: url(https://dl.dropboxusercontent.com/u/35685131/%E9%9B%BB%E5%8F%B0WORK/AKB_Web%E5%9C%96/NMB/nmb.jpg);
+            background-size: cover;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <div class="CSSTableGenerator" style="width:40%">
+        <table>
+            <tr>
+                <td> (請先點選此表確認出處) </td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 1st Album《てっぺんとったんで》" id="NMB1st_Album">NMB48 1st Album《てっぺんとったんで》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 2nd Album《世界の中心は大阪や~なんば自治区~》" id="NMB2nd_Album">NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 1st Single《絶滅黒髪少女》" id="NMB1st_Single">NMB48 1st Single《絶滅黒髪少女》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 2nd Single《オーマイガー！》" id="NMB2st_Single">NMB48 2nd Single《オーマイガー！》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 3rd Single《純情U-19》" id="NMB3st_Single">NMB48 3rd Single《純情U-19》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 4th Single《ナギイチ》" id="NMB4st_Single">NMB48 4th Single《ナギイチ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 5th Single《ヴァージニティー》" id="NMB5st_Single">NMB48 5th Single《ヴァージニティー》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 6th Single《北川謙二》" id="NMB6st_Single">NMB48 6th Single《北川謙二》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 7th Single《僕らのユリイカ》" id="NMB7st_Single">NMB48 7th Single《僕らのユリイカ》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 8th Single《カモネギックス》" id="NMB8st_Single">NMB48 8th Single《カモネギックス》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 9th Single《高嶺の林檎》" id="NMB9st_Single">NMB48 9th Single《高嶺の林檎》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 10th Single《らしくない》" id="NMB10st_Single">NMB48 10th Single《らしくない》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 11th Single《Don't look back!》" id="NMB11th_Single">NMB48 11th Single《Don't look back!》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 12th Single《ドリアン少年》" id="NMB12th_Single">NMB48 12th Single《ドリアン少年》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 13th Single《Must Be Now》" id="NMB13th_Single">NMB48 13th Single《Must Be Now》</a></td>
+            </tr>
+            <tr>
+                <td> <a href="#IDNMB48 14th Single《甘噛み姫》" id="NMB14th_Single">NMB48 14th Single《甘噛み姫》</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="effect">
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 1st Album《てっぺんとったんで》">NMB48 1st Album《てっぺんとったんで》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">01.てっぺんとったんで.&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">02.絶滅黒髪少女&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">03.オーマイガー！&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">04. 純情U-19.&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">05. ナギイチ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">06. ヴァージニティー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">07. 北川謙二&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">08. HA!（NMB48バージョン）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">09. 12月31日&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">10B. アーモンドクロワッサン計画(teamBⅡ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">10M. With my soul(teamM)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">10N. Lily(teamN)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">11B. 三日月の背中&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">11M. わるきー(渡辺美優紀)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">11N. ジャングルジム(山本彩)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">12B. 冬将軍のリグレット&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">12M. 結晶&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">12N. 捕食者たちよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">13. NMB48&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">13B. 太宰治を読んだか？&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">13M. なめくじハート&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">14. 青春のラップタイム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Album《てっぺんとったんで》')">15. 僕は待ってる&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 2nd Album《世界の中心は大阪や~なんば自治区~》">NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">01N. イビサガール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">02N. 僕らのユリイカ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">03N. カモネギックス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">04N. 高嶺の林檎&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">05N. “生徒手帳の写真は気に入っていない”の法則&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">06N. 電車を降りる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">06M. 夏の催眠術&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">06B. 君にヤラレタ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">07N. 奥歯&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">07M. ひな壇では僕の魅力は生きないんだ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">07B. もう裸足にはなれない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">08N. どしゃぶりの青春の中で&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">08M. 思わせ光線&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">08B. 野蛮なソフトクリーム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">09N. プロムの恋人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">09M. 山へ行こう&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">09B. 水切り&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">10N. 抱きしめたいけど&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">10M. ピーク&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">10B. ハートの独占権&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">11N.  一週間、全部が月曜日ならいいのに・・・&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">12N. サングラスと打ち明け話&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">13N. 時間は語り始める&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">14N. カモネギックス (RemoCon REMIX)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">14M. カモネギックス (RemoCon)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">15N. 君と出会って僕は変わった&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Album《世界の中心は大阪や~なんば自治区~》')">16T. 想像の詩人╱研究生&nbsp;</a></td>
+                    <td> </td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 1st Single《絶滅黒髪少女》">NMB48 1st Single《絶滅黒髪少女》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Single《絶滅黒髪少女》')">01.絶滅黒髪少女&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Single《絶滅黒髪少女》')">02.青春のラップタイム&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Single《絶滅黒髪少女》')">03.待ってました、新學期&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Single《絶滅黒髪少女》')">03.僕が負けた夏&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 1st Single《絶滅黒髪少女》')">04.三日月の背中&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 2nd Single《オーマイガー！》">NMB48 2nd Single《オーマイガー！》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">01 オーマイガー!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">02 僕は待ってる&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">03 捕食者たちよ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">03 結晶&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">03 嘘の天秤&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 2nd Single《オーマイガー！》')">04 なんでやねん、アイドル&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 3rd Single《純情U-19》">NMB48 3rd Single《純情U-19》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">01.純情U-19&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">02 場当たりGO!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">02.努力の雫白組&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">03 恋愛のスピード&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">03.右へ曲がれ!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 3rd Single《純情U-19》')">04.ジャングルジム&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 4th Single《ナギイチ》">NMB48 4th Single《ナギイチ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">01.ナギイチ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">02.理不尽ボール (アンダーガールズ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">03.初恋の行方とプレイボール (NMBセブン)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">03.最後のカタルシス&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">03.僕がもう少し大胆なら&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 4th Single《ナギイチ》')">04.わるきー&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 5th Single《ヴァージニティー》">NMB48 5th Single《ヴァージニティー》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">01. ヴァージニティー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">02. 妄想ガールフレンド&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">03A. 僕らのレガッタ 白組&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">03B. 存在してないもの 紅組&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">03C. 砂浜でピストル難波鉄砲隊其之壱&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 5th Single《ヴァージニティー》')">03T.ちょっと猫背&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 6th Single《北川謙二》">NMB48 6th Single《北川謙二》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">01. 北川謙二&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">02. インゴール&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">03. 冬将軍のリグレット(難波鉄砲隊弐)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">03. 星空のキャラバン(白組)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">03. 恋愛被害届け (紅組)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 6th Single《北川謙二》')">04 眠くなるまで羊は出て来ない&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 7th Single《僕らのユリイカ》">NMB48 7th Single《僕らのユリイカ》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">01. 僕らのユリイカ&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">02. 届かなそうで届くもの&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">03A. 奥歯(白組)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">03B. 野蛮なソフトクリーム(紅組)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">03C. ひな壇では僕の魅力は生きないんだ(難波鉄砲隊其之参)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 7th Single《僕らのユリイカ》')">4.さや姉&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 8th Single《カモネギックス》">NMB48 8th Single《カモネギックス》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">01 - カモネギックス&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">02A - サングラスと打ち明け話&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">03A - どじゃぶりの青春の中で（白组)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">03B - 思わせ光線（红组）&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">03C - もう裸足にはなれない(難波鉄砲隊其之四)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 8th Single《カモネギックス》')">03T - 時間は語り始める&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 9th Single《高嶺の林檎》">NMB48 9th Single《高嶺の林檎》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">01.高嶺の林檎&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">02.一週間全部が月曜日ならいいのに….&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">3A.プロムの恋人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">3B.水切り&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">3C.山へ行こう&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 9th Single《高嶺の林檎》')">04 傘はいらない&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 10th Single《らしくない》">NMB48 10th Single《らしくない》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">01.らしくない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">02.友達&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">03.休戰協定&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">03.右にしてるリング&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">03.スターになんてんありたくない&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 10th Single《らしくない》')">03. アスファルトの涙&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 11th Single《Don't look back!》">NMB48 11th Single《Don't look back!》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">01.Don't look back!&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">02 卒業旅行&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">3A 恋愛ペテン師 (Team N)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">3B ハート、叫ぶ。(Team M)&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">3C ロマンティックスノー (Team BⅡ)&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">04 みんな、大好き&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 11th Single《Don’t look back!》')">03. ニーチェ先輩&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 12th Single《ドリアン少年》">NMB48 12th Single《ドリアン少年》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">01.ドリアン少年&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">02.どうでもいい人仮面&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">03.サヨナラ、踵を踏む人&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">3A.命のへそ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">3B.僕だけのSecret Time&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 12th Single《ドリアン少年》')">3C.心の文字を書け!&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 13th Single《Must Be Now》">NMB48 13th Single《Must Be Now》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 13th Single《Must Be Now》')">01 Must Be Now&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 13th Single《Must Be Now》')">02 片想いよりも思い出を…&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 13th Single《Must Be Now》')">3A 夢に色がない理由&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 13th Single《Must Be Now》')">3B Good-Bye、Guitar&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 13th Single《Must Be Now》')">3C 空腹で恋愛をするな&nbsp;</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+         <div class="CSSTableGenerator">
+            <table>
+                <tr>
+                    <td colspan="4" id="IDNMB48 14th Single《甘噛み姫》">NMB48 14th Single《甘噛み姫》</td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">01 甘噛み姫&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">02C 365日の紙飛行機&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">03A 儚い物語&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">03B 恋を急げ&nbsp;</a></td>
+                </tr>
+                <tr>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">03C フェリー&nbsp;</a></td>
+                    <td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">03D 虹の作り方&nbsp;</a></td>
+					<td onmousedown="str=this.innerText|| this.textContent"><a href="javascript:talk('NMB48 14th Single《甘噛み姫》')">03 道頓堀よ、泣かせてくれ!&nbsp;</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

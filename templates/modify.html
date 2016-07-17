@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="120">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style_list.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/sweetalert.css') }}">-->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap-editable.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/font-awesome.min.css') }}">
+    <script src="{{ url_for('static', filename='javascripts/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascripts/jquery-ui.min.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='javascripts/sweetalert.min.js') }}"></script>-->
+    <script src="{{ url_for('static', filename='javascripts/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascripts/bootstrap-editable.min.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='javascripts/config.js') }}"></script>-->
+
+    <title>Modify</title>
+</head>
+<body>
+<div class="CSSTableGenerator">
+    <table>
+        <tr>
+            <td>delete</td>
+            <td>Number</td>
+            <td>Order Time</td>
+            <td>ID</td>
+            <td>Song</td>
+            <td>Source</td>
+            <td>condition</td>
+            <td>P.S</td>
+        </tr>
+        {% for item in items %}
+            <tr>
+{#              <td><input type="button" name="{{ item.ID }}" value="Delete Row"/></td>#}
+                <td style="text-align:center">
+                    <a class="btn btn-danger"  name="{{ item.ID }}" >
+                        <i class="fa fa-trash-o fa-lg"></i> Delete</a>
+                </td>
+                <td>{{ item.ID }}</td>
+                <td>{{ item.Order_Time }}</td>
+                <td>{{ item.User }}</td>
+                <td>{{ item.Song }}</td>
+                <td>{{ item.Source }}</td>
+                <td class="username" data-type="text" data-pk="{{ item.ID }}" data-url="/changeAPI"
+                    data-title="Enter username">{{ item.Condition }}</td>
+                <td>{{ item.PS }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+<script>
+    //turn to inline mode
+    $.fn.editable.defaults.mode = 'inline';
+    $(document).ready(function () {
+        $('.username').editable();
+    });
+
+    //deletebutton
+    $("a").click(function(){
+        var obj_delete={
+            deleteID:$(this).attr("name")
+        };
+        $.ajax({
+            url: "deleteAPI",
+            type : "POST",
+            dataType : "json",
+		    contentType : "application/json",
+            data : JSON.stringify(obj_delete) ,
+            success: function(result){
+            }});
+    });
+
+    //remove Row
+    $('table').on('click', 'a', function(e){
+        $(this).closest('tr').remove()
+    })
+</script>
+</body>
+</html>
